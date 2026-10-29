@@ -1,0 +1,29 @@
+{
+  "hashes": {
+    "studies/optimization.py": "06fd4a3c893425f7e8d4783cde731a1d707d7f2f8a98c4705ccb5649139f9641",
+    "integration/design_app/design_app.py": "88cfdaa99a222cfa747e2add072733c08eab3896d9f581803246999f64d0571b"
+  },
+  "production_gate": {
+    "requested": "learned",
+    "effective": "warm",
+    "force": false
+  },
+  "research_gate": {
+    "requested": "learned",
+    "effective": "learned",
+    "force": true
+  },
+  "refused_trial": {
+    "top_achieved_fields_null": true,
+    "last_accepted_preserved": true,
+    "failed_proposal_separate": true,
+    "first_trial_refusal_last_accepted_null": true
+  },
+  "runner": {
+    "captured_rows": 36,
+    "expected_rows": 36,
+    "all_refusals_retained": true,
+    "unique_method_family_repeat_combinations": 36,
+    "capture_only_no_canonical_write": true
+  }
+}

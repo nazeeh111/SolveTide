@@ -1,0 +1,110 @@
+* Getting build dependencies for wheel...
+running egg_info
+writing solvetide.egg-info/PKG-INFO
+writing dependency_links to solvetide.egg-info/dependency_links.txt
+writing entry points to solvetide.egg-info/entry_points.txt
+writing requirements to solvetide.egg-info/requires.txt
+writing top-level names to solvetide.egg-info/top_level.txt
+reading manifest file 'solvetide.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+warning: no files found matching '*.png' under directory 'docs'
+warning: no files found matching '*.svg' under directory 'docs'
+no previously-included directories found matching 'integration/design_app/build'
+no previously-included directories found matching 'integration/design_app/*.egg-info'
+no previously-included directories found matching '.private'
+no previously-included directories found matching '.venv'
+no previously-included directories found matching 'dist'
+warning: no previously-included files matching '__pycache__' found anywhere in distribution
+warning: no previously-included files matching '*.pyc' found anywhere in distribution
+warning: no previously-included files matching '.DS_Store' found anywhere in distribution
+adding license file 'LICENSE'
+writing manifest file 'solvetide.egg-info/SOURCES.txt'
+* Building wheel...
+running bdist_wheel
+running build
+running build_py
+creating build/lib/solvetide
+copying solvetide/server.py -> build/lib/solvetide
+copying solvetide/policy.py -> build/lib/solvetide
+copying solvetide/__init__.py -> build/lib/solvetide
+copying solvetide/runtime.py -> build/lib/solvetide
+copying solvetide/cli.py -> build/lib/solvetide
+copying solvetide/assembly.py -> build/lib/solvetide
+copying solvetide/artifacts.py -> build/lib/solvetide
+copying solvetide/__main__.py -> build/lib/solvetide
+copying solvetide/checker.py -> build/lib/solvetide
+running egg_info
+writing solvetide.egg-info/PKG-INFO
+writing dependency_links to solvetide.egg-info/dependency_links.txt
+writing entry points to solvetide.egg-info/entry_points.txt
+writing requirements to solvetide.egg-info/requires.txt
+writing top-level names to solvetide.egg-info/top_level.txt
+reading manifest file 'solvetide.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+warning: no files found matching '*.png' under directory 'docs'
+warning: no files found matching '*.svg' under directory 'docs'
+no previously-included directories found matching 'integration/design_app/build'
+no previously-included directories found matching 'integration/design_app/*.egg-info'
+no previously-included directories found matching '.private'
+no previously-included directories found matching '.venv'
+no previously-included directories found matching 'dist'
+warning: no previously-included files matching '__pycache__' found anywhere in distribution
+warning: no previously-included files matching '*.pyc' found anywhere in distribution
+warning: no previously-included files matching '.DS_Store' found anywhere in distribution
+adding license file 'LICENSE'
+writing manifest file 'solvetide.egg-info/SOURCES.txt'
+copying solvetide/py.typed -> build/lib/solvetide
+creating build/lib/solvetide/web
+copying solvetide/web/index.html -> build/lib/solvetide/web
+copying solvetide/web/style.css -> build/lib/solvetide/web
+copying solvetide/web/app.js -> build/lib/solvetide/web
+creating build/lib/solvetide/data
+copying solvetide/data/policy.json -> build/lib/solvetide/data
+installing to build/bdist.macosx-11.0-arm64/wheel
+running install
+running install_lib
+creating build/bdist.macosx-11.0-arm64/wheel
+creating build/bdist.macosx-11.0-arm64/wheel/solvetide
+copying build/lib/solvetide/server.py -> build/bdist.macosx-11.0-arm64/wheel/./solvetide
+creating build/bdist.macosx-11.0-arm64/wheel/solvetide/web
+copying build/lib/solvetide/web/index.html -> build/bdist.macosx-11.0-arm64/wheel/./solvetide/web
+copying build/lib/solvetide/web/style.css -> build/bdist.macosx-11.0-arm64/wheel/./solvetide/web
+copying build/lib/solvetide/web/app.js -> build/bdist.macosx-11.0-arm64/wheel/./solvetide/web
+copying build/lib/solvetide/policy.py -> build/bdist.macosx-11.0-arm64/wheel/./solvetide
+copying build/lib/solvetide/__init__.py -> build/bdist.macosx-11.0-arm64/wheel/./solvetide
+copying build/lib/solvetide/runtime.py -> build/bdist.macosx-11.0-arm64/wheel/./solvetide
+copying build/lib/solvetide/cli.py -> build/bdist.macosx-11.0-arm64/wheel/./solvetide
+copying build/lib/solvetide/assembly.py -> build/bdist.macosx-11.0-arm64/wheel/./solvetide
+copying build/lib/solvetide/py.typed -> build/bdist.macosx-11.0-arm64/wheel/./solvetide
+copying build/lib/solvetide/artifacts.py -> build/bdist.macosx-11.0-arm64/wheel/./solvetide
+creating build/bdist.macosx-11.0-arm64/wheel/solvetide/data
+copying build/lib/solvetide/data/policy.json -> build/bdist.macosx-11.0-arm64/wheel/./solvetide/data
+copying build/lib/solvetide/__main__.py -> build/bdist.macosx-11.0-arm64/wheel/./solvetide
+copying build/lib/solvetide/checker.py -> build/bdist.macosx-11.0-arm64/wheel/./solvetide
+running install_egg_info
+Copying solvetide.egg-info to build/bdist.macosx-11.0-arm64/wheel/./solvetide-0.1.0-py3.12.egg-info
+running install_scripts
+creating build/bdist.macosx-11.0-arm64/wheel/solvetide-0.1.0.dist-info/WHEEL
+creating '<source>/dist/.tmp-wxrgyyjb/solvetide-0.1.0-py3-none-any.whl' and adding 'build/bdist.macosx-11.0-arm64/wheel' to it
+adding 'solvetide/__init__.py'
+adding 'solvetide/__main__.py'
+adding 'solvetide/artifacts.py'
+adding 'solvetide/assembly.py'
+adding 'solvetide/checker.py'
+adding 'solvetide/cli.py'
+adding 'solvetide/policy.py'
+adding 'solvetide/py.typed'
+adding 'solvetide/runtime.py'
+adding 'solvetide/server.py'
+adding 'solvetide/data/policy.json'
+adding 'solvetide/web/app.js'
+adding 'solvetide/web/index.html'
+adding 'solvetide/web/style.css'
+adding 'solvetide-0.1.0.dist-info/licenses/LICENSE'
+adding 'solvetide-0.1.0.dist-info/METADATA'
+adding 'solvetide-0.1.0.dist-info/WHEEL'
+adding 'solvetide-0.1.0.dist-info/entry_points.txt'
+adding 'solvetide-0.1.0.dist-info/top_level.txt'
+adding 'solvetide-0.1.0.dist-info/RECORD'
+removing build/bdist.macosx-11.0-arm64/wheel
+Successfully built solvetide-0.1.0-py3-none-any.whl

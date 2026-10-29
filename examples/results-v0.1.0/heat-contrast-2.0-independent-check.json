@@ -1,0 +1,15 @@
+{
+  "status": "checked",
+  "forward": {
+    "residual_norm": 3.697071065574918e-10,
+    "rhs_norm": 0.37042143745162903,
+    "backward_error": 8.705213034694138e-12
+  },
+  "adjoint": {
+    "residual_norm": 2.726591493190582e-11,
+    "rhs_norm": 0.03665040479314576,
+    "backward_error": 1.4514838831301325e-12
+  },
+  "gradient_algebra_matches": true,
+  "scope": "Stored discrete residuals and implicit adjoint algebra only; no solution-error, discretization or physical-model certificate."
+}

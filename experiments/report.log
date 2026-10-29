@@ -1,0 +1,12 @@
+# Executed measurements
+
+Local CPU research results, three chronological repeats per held-out trajectory. Timings include assembly, feature/model/basis work, classical setup/solves and residual verification. Independent direct-reference checks are recorded outside those timings. Scheduler load varied; these finite examples establish no universal acceleration or latency guarantee.
+
+The trained paired quota/refresh model is **disabled** by development validation. The learned rows below explicitly force that frozen model for measurement; deployed CLI/editor use ordinary warm starts when disabled. Confirmation does not enable or tune it.
+
+| Family | Method | Median sequence(s) | Failed steps /120 | Retained MiB max | Forward error max | Gradient error max |
+| --- | --- | ---: | ---: | ---: | ---: | ---: |
+| heat | warm | 0.6587 | 3 | 0.13 | 7.1e-09 | 6.7e-10 |
+| heat | direct | 0.8638 | 0 | 0.98 | 4.4e-16 | 3.9e-15 |
+| heat | cold | 0.9401 | 0 | 0.10 | 4.4e-07 | 2.2e-08 |
+| heat | fixed | 0.9428 | 0 | 0.27 | 6.7e-09 | 2e-09 |

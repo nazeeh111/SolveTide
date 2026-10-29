@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "features": [
+    "operator_drift",
+    "residual_projection",
+    "previous_reduction",
+    "previous_iterations",
+    "available_rank",
+    "role_adjoint",
+    "dimension"
+  ],
+  "ranks": [
+    0,
+    2,
+    4,
+    8,
+    12
+  ],
+  "mean": [
+    0.2553960350501429,
+    0.7353383564180838,
+    0.4141319614717317,
+    3.261123064164267,
+    1.729557032143495,
+    0.5,
+    5.271231591884557
+  ],
+  "scale": [
+    0.5533079951829653,
+    0.32276867637170537,
+    0.42834151196104864,
+    1.893210991256046,
+    0.8796583003716131,
+    0.5,
+    0.6425070307846245
+  ],
+  "weights": [
+    [
+      -3.0543391407436293,
+      0.0862755381643382,
+      -0.30203684020045424,
+      -1.932179407949625e-12,
+      0.1331111870975573,
+      0.19534623008336102,
+      0.2810147166191805,
+      0.586900112303089
+    ],
+    [
+      -3.091544386691779,
+      0.3198813559656501,
+      0.02394069955176309,
+      -0.0014785555313182612,
+      0.5776227463627034,
+      -0.5669978294112463,
+      0.14579998247233764,
+      0.8752384254624299
+    ],
+    [
+      -3.018122435328685,
+      -0.14428475988111,
+      -0.08259312871739853,
+      -0.2787839612856427,
+      -0.018581051023517082,
+      0.4520610902150687,
+      -0.05192482425469357,
+      0.6578149439751544
+    ],
+    [
+      -2.7004335765618075,
+      -0.017289306862717884,
+      0.15067205296014505,
+      -0.3745325683239864,
+      -0.3313229937053429,
+      0.6720260310568145,
+      -0.07442551921224924,
+      0.7051395131142161
+    ],
+    [
+      -2.818152796819831,
+      0.1814898374965471,
+      -0.1645504070625227,
+      -0.4205491116870887,
+      0.49223524366316224,
+      -0.028661491080835905,
+      -0.006297488231158755,
+      0.32857715266305176
+    ]
+  ],
+  "refresh_margin": 0.05,
+  "enabled": false,
+  "training": {
+    "split": "development-training-only",
+    "trajectory_names": [
+      "development-heat-101",
+      "development-heat-102",
+      "development-heat-103",
+      "development-elasticity-101",
+      "development-elasticity-102",
+      "development-elasticity-103"
+    ],
+    "protocol_sha256": "cedc9058f5eee22b0d4aaee706804e6f06f78ac1f5ab91d14dc4c55ccdb318d5",
+    "records": 1200,
+    "data_origin": "original synthetic finite-element solves"
+  },
+  "license": "MIT",
+  "model": "per-rank ridge log-total-solve-seconds",
+  "development_validation": {
+    "median_seconds": {
+      "warm": 2.317869916500058,
+      "joint": 3.3094275205221493,
+      "learned": 3.3971562500082655
+    },
+    "runs": {
+      "warm": [
+        {
+          "trajectory": "development-heat-104",
+          "seconds": 1.4142660000070464,
+          "failures": 0
+        },
+        {
+          "trajectory": "development-heat-104",
+          "seconds": 0.9687812920019496,
+          "failures": 0
+        },
+        {
+          "trajectory": "development-heat-104",
+          "seconds": 1.3121538329869509,
+          "failures": 0
+        },
+        {
+          "trajectory": "development-elasticity-104",
+          "seconds": 3.2214738329930697,
+          "failures": 0
+        },
+        {
+          "trajectory": "development-elasticity-104",
+          "seconds": 4.46171587498975,
+          "failures": 0
+        },
+        {
+          "trajectory": "development-elasticity-104",
+          "seconds": 7.024209416995291,
+          "failures": 0
+        }
+      ],
+      "joint": [
+        {
+          "trajectory": "development-heat-104",
+          "seconds": 1.520518292003544,
+          "failures": 0
+        },
+        {
+          "trajectory": "development-heat-104",
+          "seconds": 2.2614415410207585,
+          "failures": 0
+        },
+        {
+          "trajectory": "development-heat-104",
+          "seconds": 2.2047604999970645,
+          "failures": 0
+        },
+        {
+          "trajectory": "development-elasticity-104",
+          "seconds": 6.322693708003499,
+          "failures": 0
+        },
+        {
+          "trajectory": "development-elasticity-104",
+          "seconds": 4.35741350002354,
+          "failures": 0
+        },
+        {
+          "trajectory": "development-elasticity-104",
+          "seconds": 5.985496667010011,
+          "failures": 0
+        }
+      ],
+      "learned": [
+        {
+          "trajectory": "development-heat-104",
+          "seconds": 2.595178375020623,
+          "failures": 0
+        },
+        {
+          "trajectory": "development-heat-104",
+          "seconds": 3.6950181249994785,
+          "failures": 0
+        },
+        {
+          "trajectory": "development-heat-104",
+          "seconds": 3.7397685830073897,
+          "failures": 0
+        },
+        {
+          "trajectory": "development-elasticity-104",
+          "seconds": 2.722981124999933,
+          "failures": 0
+        },
+        {
+          "trajectory": "development-elasticity-104",
+          "seconds": 3.990415500011295,
+          "failures": 0
+        },
+        {
+          "trajectory": "development-elasticity-104",
+          "seconds": 3.0992943750170525,
+          "failures": 0
+        }
+      ]
+    },
+    "gate": "at least 5% faster than warm and joint, zero failures"
+  },
+  "training_seconds": 460.2458395830181
+}

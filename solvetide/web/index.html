@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SolveTide · Field editor</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script>
+</head>
+<body>
+<header><a class="wordmark" href="/" aria-label="SolveTide home"><span class="mark" aria-hidden="true">≈</span> SOLVETIDE</a><span class="context">LOCAL FIELD EDITOR <span class="dot"></span> CPU</span><a class="header-link" href="#method">Method & limits ↗</a></header>
+<main>
+<section class="intro"><div><p class="eyebrow">EDIT → ASSEMBLE → SOLVE → CHECK</p><h1>Change the design.<br>Keep the equations.</h1></div><p class="intro-copy">Explore heat and elastic fields with shared solution memory. Every accepted field and sensitivity is recomputed and checked against the current discrete system.</p></section>
+<div class="workspace">
+<form id="controls" class="controls" aria-label="Design controls">
+<div class="panel-heading"><h2>Design inputs</h2><span class="step">01</span></div>
+<button class="primary" id="solve" type="submit">Compute field <span aria-hidden="true">↗</span></button><button class="quiet" id="cancel" type="button" hidden>Cancel computation</button>
+<label for="family">Physical model</label><select id="family"><option value="heat">Heat diffusion</option><option value="elasticity">Linear elasticity</option></select>
+<div class="input-row"><label for="material">Material scale</label><output for="material" id="material-value">1.00</output></div><input id="material" type="range" min="0.2" max="5" step="0.05" value="1"><p class="hint" id="material-hint">Positive conductivity multiplier</p>
+<div class="input-row"><label for="contrast">Local coefficient contrast</label><output for="contrast" id="contrast-value">1.00</output></div><input id="contrast" type="range" min="0.1" max="10" step="0.05" value="1"><p class="hint">Multiplier in the top-right quadrant</p>
+<div class="input-row"><label for="source">Source / load scale</label><output for="source" id="source-value">1.00</output></div><input id="source" type="range" min="0.1" max="3" step="0.05" value="1">
+<label for="boundary-value">Supported boundary value</label><input id="boundary-value" type="number" min="-2" max="2" step="0.05" value="0">
+<div class="two-cols"><div><label for="n">Mesh divisions</label><select id="n"><option value="12">12 × 12</option><option value="20" selected>20 × 20</option><option value="32">32 × 32</option><option value="48">48 × 48</option></select></div><div><label for="boundary">Support</label><select id="boundary"><option value="left">Left edge</option><option value="all">All edges</option></select></div></div>
+<label for="strategy">Solution memory</label><select id="strategy"><option value="warm" selected>Warm start · default</option><option value="learned">Trained joint policy · gated</option><option value="joint">Joint primal + adjoint</option><option value="fixed">Fixed rank</option><option value="drift">Drift threshold</option><option value="cold">Cold start</option><option value="direct">Sparse direct</option></select>
+
+<div class="demo-controls"><span class="small-label">TRY A STATE CHANGE</span><button type="button" id="small-edit">Small local edit <span>+5%</span></button><button type="button" id="invalidate">Change mesh <span>invalidate</span></button><button type="button" id="force-failure">Limit to 1 iteration <span>failure</span></button><button type="button" id="fallback">Recompute with direct solver <span>fallback</span></button></div>
+</form>
+<section class="field-panel" aria-labelledby="field-title"><div class="field-heading"><div><p class="eyebrow">CURRENT ASSEMBLED SYSTEM</p><h2 id="field-title">Temperature field</h2></div><span class="badge" id="status" role="status">Ready to compute</span></div>
+<div class="canvas-wrap"><canvas id="field" width="900" height="620" role="img" aria-label="No field computed yet"></canvas><div id="empty"><span class="empty-symbol">∇</span><p>Your first field starts here.</p><span>Choose a model, then compute the current equations.</span></div><div class="axis-note">y ↑<br>0 <span>x → 1</span></div></div>
+<div class="legend"><span id="min">—</span><div class="ramp"></div><span id="max">—</span><span id="field-unit">Temperature · model units</span></div>
+<div class="field-footer"><p id="field-note">No solution has been accepted.</p><button id="export" type="button" disabled>Export result JSON ↓</button></div>
+<div id="error" role="alert" hidden></div>
+</section>
+<section class="inspection" aria-labelledby="inspection-title"><div class="panel-heading"><h2 id="inspection-title">Solver inspection</h2><span class="step">02</span></div><div class="metrics"><div><span>Total computation</span><strong id="time">—</strong></div><div><span>Primal / adjoint iterations</span><strong id="iterations">—</strong></div><div><span>True relative residual</span><strong id="residual">—</strong></div><div><span>Normwise backward error</span><strong id="backward">—</strong></div><div><span>Reused rank / memory</span><strong id="memory">—</strong></div><div><span>Objective</span><strong id="objective">—</strong></div></div><div class="cache-box"><span class="small-label">CACHE DECISION</span><p id="cache">Accepted solves can populate memory. Mesh, family or constraint changes require compatible mappings.</p></div><div class="policy-box"><span class="small-label">POLICY STATE</span><p id="policy-note">Warm starts are the default. No general acceleration has been established.</p><dl id="policy-state"><div><dt>Learned corrections</dt><dd>Not selected</dd></div></dl></div><h3>Implicit sensitivities</h3><p class="hint">Derivative of the mean squared free field with respect to each parameter, from a checked adjoint solve.</p><dl id="gradients"><div><dt>No accepted adjoint yet</dt><dd>—</dd></div></dl><details><summary>Input identities & timings</summary><pre id="details">No current result.</pre></details><button id="reset" class="quiet" type="button">Clear solution memory</button></section>
+</div>
+<section id="method" class="method"><div><p class="eyebrow">WHAT “ACCEPTED” MEANS</p><h2>Checked calculation.<br>Explicit limits.</h2></div><div><p>The runtime solves a constrained sparse linear system, then independently recomputes its residual using the current matrix and right-hand side. The adjoint uses the same constrained equations. Reused memory proposes a starting correction; classical iterations decide convergence.</p><p>A small residual and backward error describe the stored equations. They do not certify physical accuracy or a small solution error in an ill-conditioned system. This editor supports bounded two-dimensional, linear models. Timing here includes assembly, both solves and verification, and is a local observation.</p></div></section>
+</main><footer><span>SOLVETIDE · REUSABLE SOLVE & SENSITIVITY RUNTIME</span><span>Local computation. No remote service.</span></footer>
+</body></html>

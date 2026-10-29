@@ -1,0 +1,16 @@
+flowchart TD
+  E[Changed coefficients, load, or prescribed value] --> A[scikit-fem assembly and constraint elimination]
+  A --> I[Actual operator, RHS, mapping and precision identities]
+  I --> P[Shared primal-adjoint memory and paired quota/refresh policy]
+  P --> C[Projected initial guess]
+  C --> K[Fixed-preconditioner SciPy classical solve]
+  K --> V[Original residual and backward-error acceptance]
+  V -->|accepted| F[Field and objective]
+  F --> D[Original discrete derivative and transpose solve]
+  D --> V2[Independent adjoint residual acceptance]
+  V2 --> G[Implicit objective gradient]
+  V -->|failed or cancelled| R[Explicit status, no current field]
+  V2 -->|failed| R
+  G --> S[Local field editor or separate inverse-design SDK client]
+  S --> B[Versioned equations and result export]
+  B --> X[Standalone standard-library checker]

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-10-29T05:22:47.399618+00:00",
+  "process_id": 89603,
+  "python": "3.12.13",
+  "url": "http://127.0.0.1:8769",
+  "source_sha256": {
+    "solvetide/assembly.py": "31d7c447c7b444b8a23fb06fd1a253d7284a710f8ee77eefc3ffc0994ff6f8dd",
+    "solvetide/runtime.py": "98108d59c3532d04b15ee37c2211f73765c04d4fa90c610d14f11a0b4f549e28",
+    "solvetide/server.py": "c6ad5309c7b0723f9ae75fbc341a9764deb54f8c7039f16a879977b637096dff",
+    "solvetide/web/app.js": "dba27994cb1341adaebe7bcc33cf73984858169c3655b09acc9adaf390db3788",
+    "solvetide/web/index.html": "c721680aeecba3dc055fd8330ef1b8b25f34c71684d43a3c9daeb54e08807ad3",
+    "solvetide/web/style.css": "b7cf52bdf479ab5a75b2c8de170d4ae09e1764768cf6755464a8f1ffce6f33b9"
+  },
+  "scope": "Fresh process imported modules from the frozen task source; web assets are read from these files per request."
+}

@@ -1,0 +1,619 @@
+{
+  "schema_version": 1,
+  "summary": [
+    {
+      "family": "heat",
+      "n": 20,
+      "samples": 3,
+      "median_seconds": 0.03219166598864831,
+      "max_observed_seconds": 0.07811320800101385,
+      "failures": 0
+    },
+    {
+      "family": "heat",
+      "n": 32,
+      "samples": 3,
+      "median_seconds": 0.060396459011826664,
+      "max_observed_seconds": 0.06264854100299999,
+      "failures": 0
+    },
+    {
+      "family": "heat",
+      "n": 48,
+      "samples": 3,
+      "median_seconds": 0.16672483397996984,
+      "max_observed_seconds": 0.1687941249983851,
+      "failures": 0
+    },
+    {
+      "family": "elasticity",
+      "n": 20,
+      "samples": 3,
+      "median_seconds": 0.0882109579979442,
+      "max_observed_seconds": 0.09397175000049174,
+      "failures": 0
+    },
+    {
+      "family": "elasticity",
+      "n": 32,
+      "samples": 3,
+      "median_seconds": 0.22002966600121,
+      "max_observed_seconds": 0.2569852919841651,
+      "failures": 0
+    },
+    {
+      "family": "elasticity",
+      "n": 48,
+      "samples": 3,
+      "median_seconds": 0.47850662501878105,
+      "max_observed_seconds": 0.5923710839997511,
+      "failures": 0
+    }
+  ],
+  "requests": [
+    {
+      "family": "heat",
+      "n": 20,
+      "repeat": 0,
+      "http_roundtrip_seconds": 0.07811320800101385,
+      "server_compute_seconds": 0.0556753329874482,
+      "response_bytes": 98001,
+      "status": "converged",
+      "field_present": true,
+      "identities": {
+        "schema": "solvetide-system-v1",
+        "operator": "649f8444d15383fa0f163326cac7578f34d3c7f9756cef60ee061efc5a967c1e",
+        "rhs": "e61b4b7dceaa902872bea3499ad98f379548c7dda397ade87f7650a73863f502",
+        "mapping": "7a8b211fa59014265b733971a78cff0c518f7b2582426829f31810e277b8d7ee",
+        "precision": "float64",
+        "boundary": "3a9ee07e19d19852113066977336ebdb7cb1826bc619abcb02126ddb931831e7"
+      },
+      "input": {
+        "family": "heat",
+        "n": 20,
+        "boundary": "left",
+        "strategy": "warm",
+        "maxiter": 2000,
+        "parameters": {
+          "material": 1.0,
+          "contrast": 1.0,
+          "source": 1.0,
+          "boundary_value": 0.0
+        }
+      }
+    },
+    {
+      "family": "heat",
+      "n": 20,
+      "repeat": 1,
+      "http_roundtrip_seconds": 0.03219166598864831,
+      "server_compute_seconds": 0.014245750004192814,
+      "response_bytes": 97925,
+      "status": "converged",
+      "field_present": true,
+      "identities": {
+        "schema": "solvetide-system-v1",
+        "operator": "da47865b580f9beade1ebce62427f6d85deab7f105d59fb62763f7fe09ea9125",
+        "rhs": "306a8b0bc2f0e3e328356ddaf63b6b166f6115e7404ac93de852b6785aa91af6",
+        "mapping": "7a8b211fa59014265b733971a78cff0c518f7b2582426829f31810e277b8d7ee",
+        "precision": "float64",
+        "boundary": "3a9ee07e19d19852113066977336ebdb7cb1826bc619abcb02126ddb931831e7"
+      },
+      "input": {
+        "family": "heat",
+        "n": 20,
+        "boundary": "left",
+        "strategy": "warm",
+        "maxiter": 2000,
+        "parameters": {
+          "material": 1.0,
+          "contrast": 1.05,
+          "source": 1.02,
+          "boundary_value": 0.0
+        }
+      }
+    },
+    {
+      "family": "heat",
+      "n": 20,
+      "repeat": 2,
+      "http_roundtrip_seconds": 0.031061749992659315,
+      "server_compute_seconds": 0.012710084003629163,
+      "response_bytes": 98166,
+      "status": "converged",
+      "field_present": true,
+      "identities": {
+        "schema": "solvetide-system-v1",
+        "operator": "6f6599b02bd66a7ec386664d0119209ee458a58ddd441ab28b7e4868d4289d7f",
+        "rhs": "d4e33056b139445b9736b2da56c2ae30a359194190d9419dbc6b94a87cf479af",
+        "mapping": "7a8b211fa59014265b733971a78cff0c518f7b2582426829f31810e277b8d7ee",
+        "precision": "float64",
+        "boundary": "3a9ee07e19d19852113066977336ebdb7cb1826bc619abcb02126ddb931831e7"
+      },
+      "input": {
+        "family": "heat",
+        "n": 20,
+        "boundary": "left",
+        "strategy": "warm",
+        "maxiter": 2000,
+        "parameters": {
+          "material": 1.0,
+          "contrast": 1.1,
+          "source": 1.04,
+          "boundary_value": 0.0
+        }
+      }
+    },
+    {
+      "family": "heat",
+      "n": 32,
+      "repeat": 0,
+      "http_roundtrip_seconds": 0.059953999996650964,
+      "server_compute_seconds": 0.022841166995931417,
+      "response_bytes": 183151,
+      "status": "converged",
+      "field_present": true,
+      "identities": {
+        "schema": "solvetide-system-v1",
+        "operator": "42ad6cb459b1b5f62021ae3da221e9a860b6baf4121f2e27f432d5170d16378d",
+        "rhs": "3a8ed1818fec625887a501d607d34b8e4b380db2786cc6da865bb04ea56442ae",
+        "mapping": "158d70e07a9c20edcb94bc3f3d426bed5fa41d79bf2164e237550c1953922e00",
+        "precision": "float64",
+        "boundary": "7a217c7b1dfe996908fefd57c7e79ce2ae2c695317ec20d64abf9a0332e25ac7"
+      },
+      "input": {
+        "family": "heat",
+        "n": 32,
+        "boundary": "left",
+        "strategy": "warm",
+        "maxiter": 2000,
+        "parameters": {
+          "material": 1.0,
+          "contrast": 1.0,
+          "source": 1.0,
+          "boundary_value": 0.0
+        }
+      }
+    },
+    {
+      "family": "heat",
+      "n": 32,
+      "repeat": 1,
+      "http_roundtrip_seconds": 0.06264854100299999,
+      "server_compute_seconds": 0.02466612501302734,
+      "response_bytes": 185209,
+      "status": "converged",
+      "field_present": true,
+      "identities": {
+        "schema": "solvetide-system-v1",
+        "operator": "865bf9e2c6021f0fda62ba2f1844144a7db5df3cb7a3694cf48150a49067258f",
+        "rhs": "65e41f03858c76bf6c32e01a815e2241089cb04e22cc744681537e864b479f65",
+        "mapping": "158d70e07a9c20edcb94bc3f3d426bed5fa41d79bf2164e237550c1953922e00",
+        "precision": "float64",
+        "boundary": "7a217c7b1dfe996908fefd57c7e79ce2ae2c695317ec20d64abf9a0332e25ac7"
+      },
+      "input": {
+        "family": "heat",
+        "n": 32,
+        "boundary": "left",
+        "strategy": "warm",
+        "maxiter": 2000,
+        "parameters": {
+          "material": 1.0,
+          "contrast": 1.05,
+          "source": 1.02,
+          "boundary_value": 0.0
+        }
+      }
+    },
+    {
+      "family": "heat",
+      "n": 32,
+      "repeat": 2,
+      "http_roundtrip_seconds": 0.060396459011826664,
+      "server_compute_seconds": 0.024003707978408784,
+      "response_bytes": 181969,
+      "status": "converged",
+      "field_present": true,
+      "identities": {
+        "schema": "solvetide-system-v1",
+        "operator": "88f598ebe1fb97bbbca8fab48e1689b05ec63efb5c6e5a228f0dc9b5b984ee03",
+        "rhs": "ed04ce086f6e198f40b666b9c9825e67a11b459e4b8e3fb32054457063f8ded1",
+        "mapping": "158d70e07a9c20edcb94bc3f3d426bed5fa41d79bf2164e237550c1953922e00",
+        "precision": "float64",
+        "boundary": "7a217c7b1dfe996908fefd57c7e79ce2ae2c695317ec20d64abf9a0332e25ac7"
+      },
+      "input": {
+        "family": "heat",
+        "n": 32,
+        "boundary": "left",
+        "strategy": "warm",
+        "maxiter": 2000,
+        "parameters": {
+          "material": 1.0,
+          "contrast": 1.1,
+          "source": 1.04,
+          "boundary_value": 0.0
+        }
+      }
+    },
+    {
+      "family": "heat",
+      "n": 48,
+      "repeat": 0,
+      "http_roundtrip_seconds": 0.13688391700270586,
+      "server_compute_seconds": 0.040328375005628914,
+      "response_bytes": 597180,
+      "status": "converged",
+      "field_present": true,
+      "identities": {
+        "schema": "solvetide-system-v1",
+        "operator": "017d0a4f205f3cd877c0933caa0cd7bb7624f5d72eab96a569c8e72f3f421fba",
+        "rhs": "16584749e02be5a3f0ae9b1c760a9b571e289c5ca3b8104f6239be3c60e91d34",
+        "mapping": "abb685d339397cd0537c1264034b9efd370ac7fe93d16270aac7f287ad23e021",
+        "precision": "float64",
+        "boundary": "10133cadf628d53a59579e0fbeea9deb8af099bc4e1c62ca11b0be535bdafcb5"
+      },
+      "input": {
+        "family": "heat",
+        "n": 48,
+        "boundary": "left",
+        "strategy": "warm",
+        "maxiter": 2000,
+        "parameters": {
+          "material": 1.0,
+          "contrast": 1.0,
+          "source": 1.0,
+          "boundary_value": 0.0
+        }
+      }
+    },
+    {
+      "family": "heat",
+      "n": 48,
+      "repeat": 1,
+      "http_roundtrip_seconds": 0.1687941249983851,
+      "server_compute_seconds": 0.058750083000632,
+      "response_bytes": 596516,
+      "status": "converged",
+      "field_present": true,
+      "identities": {
+        "schema": "solvetide-system-v1",
+        "operator": "4a5e398076040d7b9059b1469789f1ee5595cfda095a81b3cf5b5ce1ebfe439d",
+        "rhs": "056d6b3dc8a1d93a0d3250ae2163788978fa702a0ea9e56c45291ffc87bf651f",
+        "mapping": "abb685d339397cd0537c1264034b9efd370ac7fe93d16270aac7f287ad23e021",
+        "precision": "float64",
+        "boundary": "10133cadf628d53a59579e0fbeea9deb8af099bc4e1c62ca11b0be535bdafcb5"
+      },
+      "input": {
+        "family": "heat",
+        "n": 48,
+        "boundary": "left",
+        "strategy": "warm",
+        "maxiter": 2000,
+        "parameters": {
+          "material": 1.0,
+          "contrast": 1.05,
+          "source": 1.02,
+          "boundary_value": 0.0
+        }
+      }
+    },
+    {
+      "family": "heat",
+      "n": 48,
+      "repeat": 2,
+      "http_roundtrip_seconds": 0.16672483397996984,
+      "server_compute_seconds": 0.051065374980680645,
+      "response_bytes": 595796,
+      "status": "converged",
+      "field_present": true,
+      "identities": {
+        "schema": "solvetide-system-v1",
+        "operator": "a5e7e51d47f761e2eae304f0c3bc6f0ff3bc2d5e46f6320767bdad026ec512d0",
+        "rhs": "79afa799aab83e6b4b8e42e341af9d1d7289ffe1e6088da8b7b54b930855b3b5",
+        "mapping": "abb685d339397cd0537c1264034b9efd370ac7fe93d16270aac7f287ad23e021",
+        "precision": "float64",
+        "boundary": "10133cadf628d53a59579e0fbeea9deb8af099bc4e1c62ca11b0be535bdafcb5"
+      },
+      "input": {
+        "family": "heat",
+        "n": 48,
+        "boundary": "left",
+        "strategy": "warm",
+        "maxiter": 2000,
+        "parameters": {
+          "material": 1.0,
+          "contrast": 1.1,
+          "source": 1.04,
+          "boundary_value": 0.0
+        }
+      }
+    },
+    {
+      "family": "elasticity",
+      "n": 20,
+      "repeat": 0,
+      "http_roundtrip_seconds": 0.0882109579979442,
+      "server_compute_seconds": 0.038980375014944,
+      "response_bytes": 329737,
+      "status": "converged",
+      "field_present": true,
+      "identities": {
+        "schema": "solvetide-system-v1",
+        "operator": "a66e71735ce2d44e04bf77f2cd1984f92649317713251370626e7a46cc52d59d",
+        "rhs": "7098fa1cb5fff2dae314e969dae34ae3bbd980a05fa0728fc95efe1e2af0b47a",
+        "mapping": "88cf063fcad18ec5bb8b17ede26f0c4a73723004e9eb879a098cc6173c0c4b8a",
+        "precision": "float64",
+        "boundary": "9f87d9f13b8e44383b960b3b3bea96e3cafd6dd87fd763221a54f9edf6a4a02c"
+      },
+      "input": {
+        "family": "elasticity",
+        "n": 20,
+        "boundary": "left",
+        "strategy": "warm",
+        "maxiter": 2000,
+        "parameters": {
+          "material": 1.0,
+          "contrast": 1.0,
+          "source": 1.0,
+          "boundary_value": 0.0
+        }
+      }
+    },
+    {
+      "family": "elasticity",
+      "n": 20,
+      "repeat": 1,
+      "http_roundtrip_seconds": 0.08813399999053217,
+      "server_compute_seconds": 0.04104362498037517,
+      "response_bytes": 329228,
+      "status": "converged",
+      "field_present": true,
+      "identities": {
+        "schema": "solvetide-system-v1",
+        "operator": "2fcf0756fb1e342496e86ce9e87f534d3a607ae152c2c19cc2455b575a65466d",
+        "rhs": "9e2c703c6f4cf159495fbf436b7cf3f07651c79f557d338b1004d2acdf12d774",
+        "mapping": "88cf063fcad18ec5bb8b17ede26f0c4a73723004e9eb879a098cc6173c0c4b8a",
+        "precision": "float64",
+        "boundary": "9f87d9f13b8e44383b960b3b3bea96e3cafd6dd87fd763221a54f9edf6a4a02c"
+      },
+      "input": {
+        "family": "elasticity",
+        "n": 20,
+        "boundary": "left",
+        "strategy": "warm",
+        "maxiter": 2000,
+        "parameters": {
+          "material": 1.0,
+          "contrast": 1.05,
+          "source": 1.02,
+          "boundary_value": 0.0
+        }
+      }
+    },
+    {
+      "family": "elasticity",
+      "n": 20,
+      "repeat": 2,
+      "http_roundtrip_seconds": 0.09397175000049174,
+      "server_compute_seconds": 0.0376262080098968,
+      "response_bytes": 329496,
+      "status": "converged",
+      "field_present": true,
+      "identities": {
+        "schema": "solvetide-system-v1",
+        "operator": "c45bcffad89c1c422ac76fa7cf82737bed96f7711f5ea70ea82d753c09e155f9",
+        "rhs": "66ab6e9eb39622f5ad773baa615da6428530b19c546f0ea6df1ccf1d11c14f38",
+        "mapping": "88cf063fcad18ec5bb8b17ede26f0c4a73723004e9eb879a098cc6173c0c4b8a",
+        "precision": "float64",
+        "boundary": "9f87d9f13b8e44383b960b3b3bea96e3cafd6dd87fd763221a54f9edf6a4a02c"
+      },
+      "input": {
+        "family": "elasticity",
+        "n": 20,
+        "boundary": "left",
+        "strategy": "warm",
+        "maxiter": 2000,
+        "parameters": {
+          "material": 1.0,
+          "contrast": 1.1,
+          "source": 1.04,
+          "boundary_value": 0.0
+        }
+      }
+    },
+    {
+      "family": "elasticity",
+      "n": 32,
+      "repeat": 0,
+      "http_roundtrip_seconds": 0.21145537501433864,
+      "server_compute_seconds": 0.09673541699885391,
+      "response_bytes": 831341,
+      "status": "converged",
+      "field_present": true,
+      "identities": {
+        "schema": "solvetide-system-v1",
+        "operator": "3f4305d8f6cd8438f2fb38130b3771ed6935139940e799e72640cfae825bfeac",
+        "rhs": "391ed18c921731bb8c006d6856d7dbb3c894610a5cd55baf993f3f6b2a102945",
+        "mapping": "7cc27bec284395261f987dc76f62e851c4611dc1374ccdfb3596865ee971cd97",
+        "precision": "float64",
+        "boundary": "c8fa21270715b6634e0baa88edc59ea2a2f3c847d2891bcebb3e010e689c2c38"
+      },
+      "input": {
+        "family": "elasticity",
+        "n": 32,
+        "boundary": "left",
+        "strategy": "warm",
+        "maxiter": 2000,
+        "parameters": {
+          "material": 1.0,
+          "contrast": 1.0,
+          "source": 1.0,
+          "boundary_value": 0.0
+        }
+      }
+    },
+    {
+      "family": "elasticity",
+      "n": 32,
+      "repeat": 1,
+      "http_roundtrip_seconds": 0.22002966600121,
+      "server_compute_seconds": 0.08841116598341614,
+      "response_bytes": 834571,
+      "status": "converged",
+      "field_present": true,
+      "identities": {
+        "schema": "solvetide-system-v1",
+        "operator": "06355387f92654c708e518d3072a54d2279c7f2df4c299e251cc6d1e219b45cc",
+        "rhs": "d9fc30862dded2e6eb136ce3abf98fcd72ae421df6bf6198b6ae5b0b91cc6947",
+        "mapping": "7cc27bec284395261f987dc76f62e851c4611dc1374ccdfb3596865ee971cd97",
+        "precision": "float64",
+        "boundary": "c8fa21270715b6634e0baa88edc59ea2a2f3c847d2891bcebb3e010e689c2c38"
+      },
+      "input": {
+        "family": "elasticity",
+        "n": 32,
+        "boundary": "left",
+        "strategy": "warm",
+        "maxiter": 2000,
+        "parameters": {
+          "material": 1.0,
+          "contrast": 1.05,
+          "source": 1.02,
+          "boundary_value": 0.0
+        }
+      }
+    },
+    {
+      "family": "elasticity",
+      "n": 32,
+      "repeat": 2,
+      "http_roundtrip_seconds": 0.2569852919841651,
+      "server_compute_seconds": 0.09999975000391714,
+      "response_bytes": 830504,
+      "status": "converged",
+      "field_present": true,
+      "identities": {
+        "schema": "solvetide-system-v1",
+        "operator": "a78a1432d1453b2c5dcf07004631c30fc1b3b4373a6d211e75c36d9af1446cf3",
+        "rhs": "92c99c4c571f7d91becb04e6f551ccfc13031f58dbefe301a8ad163b2fb309e3",
+        "mapping": "7cc27bec284395261f987dc76f62e851c4611dc1374ccdfb3596865ee971cd97",
+        "precision": "float64",
+        "boundary": "c8fa21270715b6634e0baa88edc59ea2a2f3c847d2891bcebb3e010e689c2c38"
+      },
+      "input": {
+        "family": "elasticity",
+        "n": 32,
+        "boundary": "left",
+        "strategy": "warm",
+        "maxiter": 2000,
+        "parameters": {
+          "material": 1.0,
+          "contrast": 1.1,
+          "source": 1.04,
+          "boundary_value": 0.0
+        }
+      }
+    },
+    {
+      "family": "elasticity",
+      "n": 48,
+      "repeat": 0,
+      "http_roundtrip_seconds": 0.5923710839997511,
+      "server_compute_seconds": 0.2977418749942444,
+      "response_bytes": 1968560,
+      "status": "converged",
+      "field_present": true,
+      "identities": {
+        "schema": "solvetide-system-v1",
+        "operator": "3004eaa1ac48384846cfb1ccdd2007ce71d0484b06ba81ec4143e78b3dc6fc7c",
+        "rhs": "b1d704c108c09dd5ae28a0ef91bc2a9bb1203a7966fdbd9d197bc5d2954a2385",
+        "mapping": "25df46b037d9b80ca766aa99a8ce12189afa8ba6e2da2ca16983e2a2f1eb8e7b",
+        "precision": "float64",
+        "boundary": "1fc370f140eca2089caf343443228db97b3137c987ee996ceb265cd8d95ae58a"
+      },
+      "input": {
+        "family": "elasticity",
+        "n": 48,
+        "boundary": "left",
+        "strategy": "warm",
+        "maxiter": 2000,
+        "parameters": {
+          "material": 1.0,
+          "contrast": 1.0,
+          "source": 1.0,
+          "boundary_value": 0.0
+        }
+      }
+    },
+    {
+      "family": "elasticity",
+      "n": 48,
+      "repeat": 1,
+      "http_roundtrip_seconds": 0.47850662501878105,
+      "server_compute_seconds": 0.2104460830159951,
+      "response_bytes": 1965187,
+      "status": "converged",
+      "field_present": true,
+      "identities": {
+        "schema": "solvetide-system-v1",
+        "operator": "6ac6e0b01e5cc9379e8d34ed2f7d5921e86bc76bffd676171491725cfe4de4ec",
+        "rhs": "a9fe1ca2645944c7aa488646e299a60c8b074e3f7f22b091594fa5834fc6e80b",
+        "mapping": "25df46b037d9b80ca766aa99a8ce12189afa8ba6e2da2ca16983e2a2f1eb8e7b",
+        "precision": "float64",
+        "boundary": "1fc370f140eca2089caf343443228db97b3137c987ee996ceb265cd8d95ae58a"
+      },
+      "input": {
+        "family": "elasticity",
+        "n": 48,
+        "boundary": "left",
+        "strategy": "warm",
+        "maxiter": 2000,
+        "parameters": {
+          "material": 1.0,
+          "contrast": 1.05,
+          "source": 1.02,
+          "boundary_value": 0.0
+        }
+      }
+    },
+    {
+      "family": "elasticity",
+      "n": 48,
+      "repeat": 2,
+      "http_roundtrip_seconds": 0.45491125000989996,
+      "server_compute_seconds": 0.20320887499838136,
+      "response_bytes": 1965772,
+      "status": "converged",
+      "field_present": true,
+      "identities": {
+        "schema": "solvetide-system-v1",
+        "operator": "08dd38f459bc2677583c43fedcdcb795ee169ccc146df0abe1b5cbf513560617",
+        "rhs": "3958f8d3a2614089a6b31283e21acf0bee0c2ba41a67728c496685cd74304db1",
+        "mapping": "25df46b037d9b80ca766aa99a8ce12189afa8ba6e2da2ca16983e2a2f1eb8e7b",
+        "precision": "float64",
+        "boundary": "1fc370f140eca2089caf343443228db97b3137c987ee996ceb265cd8d95ae58a"
+      },
+      "input": {
+        "family": "elasticity",
+        "n": 48,
+        "boundary": "left",
+        "strategy": "warm",
+        "maxiter": 2000,
+        "parameters": {
+          "material": 1.0,
+          "contrast": 1.1,
+          "source": 1.04,
+          "boundary_value": 0.0
+        }
+      }
+    }
+  ],
+  "source_sha256": {
+    "solvetide/server.py": "c6ad5309c7b0723f9ae75fbc341a9764deb54f8c7039f16a879977b637096dff",
+    "solvetide/runtime.py": "98108d59c3532d04b15ee37c2211f73765c04d4fa90c610d14f11a0b4f549e28",
+    "solvetide/assembly.py": "31d7c447c7b444b8a23fb06fd1a253d7284a710f8ee77eefc3ffc0994ff6f8dd"
+  },
+  "scope": "Actual loopback POST, changed source/contrast, assembly, forward+adjoint checks, JSON serialization, response transport and JSON parse. Browser paint is excluded. Three local observations per mesh/family under concurrent host load; no hard latency, real-time or universal interactive guarantee."
+}

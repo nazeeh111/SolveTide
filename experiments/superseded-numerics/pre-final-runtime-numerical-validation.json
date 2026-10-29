@@ -1,0 +1,1098 @@
+{
+  "schema": "solvetide-numerical-validation-v1",
+  "environment": {
+    "python": "3.12.13",
+    "platform": "macOS-27.2-arm64-arm-64bit",
+    "dependencies": {
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "scikit-fem": "12.0.2"
+    },
+    "longdouble_mantissa_bits": 52,
+    "small_case_residual_arithmetic": "Decimal 60 significant digits on stored binary64 operands (nDOF<=512)"
+  },
+  "source_sha256": {
+    "solvetide/assembly.py": "a3b82bb778cae758b4c308a2ff62882c7a4e9f018b158ebbea83b7cfe9d3f57a",
+    "solvetide/runtime.py": "5f72e7d7c2cd7d685b62a0d3bff05bd78c0ca8537235080137ce4522fd7e910d",
+    "studies/validate.py": "5214cfd0a9272a0b74a842a873fd1cc9fb54e1b4e041dac3bd246a51ddef12fd"
+  },
+  "forward_and_gradient_cases": [
+    {
+      "family": "heat",
+      "n": 6,
+      "ndofs": 42,
+      "nonzeros": 184,
+      "parameters": {
+        "material": 1.7,
+        "source": 0.8,
+        "boundary_value": 0.13,
+        "contrast": 3.5
+      },
+      "target": 0.07,
+      "boundary": "left",
+      "identity": {
+        "schema": "solvetide-system-v1",
+        "operator": "0513ee19f04dd1a3f332cf1e31a8a653d50cd3f9331e4109397c68043cf51679",
+        "rhs": "7bf29d07933d524f7ff0324530b34469f486d3e7dec923999325eceecf33b79a",
+        "mapping": "7e765a25e0ac2adfb9c48d91abf859642a1c56c5f3b5bd6b030e23d5e2e4c8f8",
+        "precision": "float64",
+        "boundary": "c33af5a89736fc343e0f17a9fb19bb3747b914897167d8154e592157e2c2211b"
+      },
+      "status": "converged",
+      "adjoint_status": "converged",
+      "objective": 0.02643776658121254,
+      "reference_objective": 0.02643776658121239,
+      "relative_forward_error_vs_refined_lu": 9.480053682531496e-14,
+      "relative_adjoint_error_vs_refined_lu": 2.883708167056871e-14,
+      "independent_forward_residual": {
+        "residual_l2": 1.8099159341025316e-12,
+        "relative_residual_l2": 3.1181641748743353e-12,
+        "backward_error_inf": 4.789262618117409e-14
+      },
+      "independent_adjoint_residual": {
+        "residual_l2": 7.254589126437889e-14,
+        "relative_residual_l2": 2.0446081426261976e-12,
+        "backward_error_inf": 7.22433112695485e-15
+      },
+      "gradients": {
+        "material": {
+          "runtime_gradient": -0.023175486430355108,
+          "independent_direct_adjoint_gradient": -0.023175486430354948,
+          "direct_absolute_error": 1.5959455978986625e-16,
+          "steps": [
+            {
+              "step": 0.01,
+              "central_difference": -0.023176889297318003,
+              "absolute_error": 1.4028669628948776e-06,
+              "relative_error": 6.052869929603605e-05
+            },
+            {
+              "step": 0.001,
+              "central_difference": -0.023175500458272325,
+              "absolute_error": 1.4027917216719032e-08,
+              "relative_error": 6.052908001696192e-07
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.02317548657111007,
+              "absolute_error": 1.4075496324039705e-10,
+              "relative_error": 6.073441556815396e-09
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.02317548642386674,
+              "absolute_error": 6.488368869961292e-12,
+              "relative_error": 2.7996689042361875e-10
+            },
+            {
+              "step": 1e-06,
+              "central_difference": -0.02317548641710132,
+              "absolute_error": 1.3253786956823888e-11,
+              "relative_error": 5.718881886968362e-10
+            }
+          ],
+          "best_relative_fd_error": 2.7996689042361875e-10
+        },
+        "contrast": {
+          "runtime_gradient": -0.00042049071663304157,
+          "independent_direct_adjoint_gradient": -0.0004204907166330482,
+          "direct_absolute_error": 6.613633252161577e-18,
+          "steps": [
+            {
+              "step": 0.01,
+              "central_difference": -0.00042049340454406586,
+              "absolute_error": 2.6879110242910773e-09,
+              "relative_error": 6.392278678438572e-06
+            },
+            {
+              "step": 0.001,
+              "central_difference": -0.0004204907433948135,
+              "absolute_error": 2.6761771943460688e-11,
+              "relative_error": 6.364414048071713e-08
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.0004204907141404368,
+              "absolute_error": 2.4926047554121866e-12,
+              "relative_error": 5.927847290829634e-09
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.00042049069885752294,
+              "absolute_error": 1.7775518632977966e-11,
+              "relative_error": 4.227327246439664e-08
+            },
+            {
+              "step": 1e-06,
+              "central_difference": -0.00042049073945005233,
+              "absolute_error": 2.281701075908943e-11,
+              "relative_error": 5.426281394194587e-08
+            }
+          ],
+          "best_relative_fd_error": 5.927847290829634e-09
+        },
+        "source": {
+          "runtime_gradient": 0.04924790866450441,
+          "independent_direct_adjoint_gradient": 0.04924790866450426,
+          "direct_absolute_error": 1.5265566588595902e-16,
+          "steps": [
+            {
+              "step": 0.01,
+              "central_difference": 0.04924790866450458,
+              "absolute_error": 1.734723475976807e-16,
+              "relative_error": 3.5224307448147713e-15
+            },
+            {
+              "step": 0.001,
+              "central_difference": 0.04924790866450701,
+              "absolute_error": 2.6020852139652106e-15,
+              "relative_error": 5.283646117221896e-14
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.04924790866446885,
+              "absolute_error": 3.5561831257524545e-14,
+              "relative_error": 7.220983026870306e-13
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.04924790866465966,
+              "absolute_error": 1.5525081220602033e-13,
+              "relative_error": 3.152434619369501e-12
+            },
+            {
+              "step": 1e-06,
+              "central_difference": 0.049247908666047446,
+              "absolute_error": 1.54303653188137e-12,
+              "relative_error": 3.133202147414581e-11
+            }
+          ],
+          "best_relative_fd_error": 3.5224307448147713e-15
+        },
+        "boundary_value": {
+          "runtime_gradient": 0.2246201038470206,
+          "independent_direct_adjoint_gradient": 0.2246201038470233,
+          "direct_absolute_error": 2.6922908347160046e-15,
+          "steps": [
+            {
+              "step": 0.01,
+              "central_difference": 0.22462010384702372,
+              "absolute_error": 3.1086244689504383e-15,
+              "relative_error": 1.3839475700124999e-14
+            },
+            {
+              "step": 0.001,
+              "central_difference": 0.2246201038470265,
+              "absolute_error": 5.88418203051333e-15,
+              "relative_error": 2.6196150432379137e-14
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.2246201038469918,
+              "absolute_error": 2.881028748902281e-14,
+              "relative_error": 1.2826228372080309e-13
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.224620103840209,
+              "absolute_error": 6.811606834133954e-12,
+              "relative_error": 3.032500972741539e-11
+            },
+            {
+              "step": 1e-06,
+              "central_difference": 0.22462010384680098,
+              "absolute_error": 2.196298698464716e-13,
+              "relative_error": 9.777836715633091e-13
+            }
+          ],
+          "best_relative_fd_error": 1.3839475700124999e-14
+        }
+      },
+      "gates": {
+        "relative_forward_error_max": 1e-07,
+        "relative_adjoint_error_max": 1e-07,
+        "relative_direct_gradient_error_max": 1e-07,
+        "best_relative_fd_error_max": 1e-05
+      },
+      "passed": true
+    },
+    {
+      "family": "heat",
+      "n": 10,
+      "ndofs": 110,
+      "nonzeros": 508,
+      "parameters": {
+        "material": 1.7,
+        "source": 0.8,
+        "boundary_value": 0.13,
+        "contrast": 3.5
+      },
+      "target": 0.07,
+      "boundary": "left",
+      "identity": {
+        "schema": "solvetide-system-v1",
+        "operator": "30d2254f5a8966c15a292e365f6297a55a9098ba509810dbd93a9498564e8613",
+        "rhs": "5ee99ed98273fba157b0fba51a81c5e5c78921373e9e299130a012e72ed1b912",
+        "mapping": "6ef462dfffc0b24cd173218bc5b70947c89ec082aca98786e72781d3f3ced54d",
+        "precision": "float64",
+        "boundary": "1c2c22aa2934acdb00e3db1165cbde796d6fa3f24ed474992fdddb8d400067ac"
+      },
+      "status": "converged",
+      "adjoint_status": "converged",
+      "objective": 0.025350378241773646,
+      "reference_objective": 0.025350378241773858,
+      "relative_forward_error_vs_refined_lu": 1.514353597261486e-13,
+      "relative_adjoint_error_vs_refined_lu": 3.725128978490205e-14,
+      "independent_forward_residual": {
+        "residual_l2": 3.129354772397288e-12,
+        "relative_residual_l2": 4.411453728883012e-12,
+        "backward_error_inf": 5.644697063374356e-14
+      },
+      "independent_adjoint_residual": {
+        "residual_l2": 1.0199570218429409e-13,
+        "relative_residual_l2": 4.750846462113927e-12,
+        "backward_error_inf": 9.934711397753945e-15
+      },
+      "gradients": {
+        "material": {
+          "runtime_gradient": -0.022115654188739047,
+          "independent_direct_adjoint_gradient": -0.02211565418873923,
+          "direct_absolute_error": 1.8388068845354155e-16,
+          "steps": [
+            {
+              "step": 0.01,
+              "central_difference": -0.022116991300984157,
+              "absolute_error": 1.3371122451096007e-06,
+              "relative_error": 6.045633544423839e-05
+            },
+            {
+              "step": 0.001,
+              "central_difference": -0.022115667559064953,
+              "absolute_error": 1.3370325905454061e-08,
+              "relative_error": 6.045635235629015e-07
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.022115654322064915,
+              "absolute_error": 1.3332586770720134e-10,
+              "relative_error": 6.028574410035943e-09
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.022115654175168527,
+              "absolute_error": 1.3570519707961637e-11,
+              "relative_error": 6.136160202247844e-10
+            },
+            {
+              "step": 1e-06,
+              "central_difference": -0.022115654231547044,
+              "absolute_error": 4.2807996730731546e-11,
+              "relative_error": 1.9356423410557644e-09
+            }
+          ],
+          "best_relative_fd_error": 6.136160202247844e-10
+        },
+        "contrast": {
+          "runtime_gradient": -0.00037730109479808596,
+          "independent_direct_adjoint_gradient": -0.00037730109479832026,
+          "direct_absolute_error": 2.342960894741175e-16,
+          "steps": [
+            {
+              "step": 0.01,
+              "central_difference": -0.0003773035529508473,
+              "absolute_error": 2.458152761311734e-09,
+              "relative_error": 6.515053309428991e-06
+            },
+            {
+              "step": 0.001,
+              "central_difference": -0.00037730111935793675,
+              "absolute_error": 2.4559850789369897e-11,
+              "relative_error": 6.50935009977284e-08
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.00037730108986763766,
+              "absolute_error": 4.930448302235824e-12,
+              "relative_error": 1.3067675578504141e-08
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.00037730108759514985,
+              "absolute_error": 7.2029361099755496e-12,
+              "relative_error": 1.909068436133276e-08
+            },
+            {
+              "step": 1e-06,
+              "central_difference": -0.00037730095436838695,
+              "absolute_error": 1.4042969901078423e-10,
+              "relative_error": 3.721953128334697e-07
+            }
+          ],
+          "best_relative_fd_error": 1.3067675578504141e-08
+        },
+        "source": {
+          "runtime_gradient": 0.04699576515107069,
+          "independent_direct_adjoint_gradient": 0.04699576515107081,
+          "direct_absolute_error": 1.1796119636642288e-16,
+          "steps": [
+            {
+              "step": 0.01,
+              "central_difference": 0.046995765151070824,
+              "absolute_error": 1.3183898417423734e-16,
+              "relative_error": 2.8053375394662196e-15
+            },
+            {
+              "step": 0.001,
+              "central_difference": 0.04699576515107204,
+              "absolute_error": 1.3461454173580023e-15,
+              "relative_error": 2.8643972771391186e-14
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.046995765151033875,
+              "absolute_error": 3.6817771054131754e-14,
+              "relative_error": 7.834274202319896e-13
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.04699576515113795,
+              "absolute_error": 6.725869861057276e-14,
+              "relative_error": 1.4311650931582751e-12
+            },
+            {
+              "step": 1e-06,
+              "central_difference": 0.046995765156168656,
+              "absolute_error": 5.097963717837217e-12,
+              "relative_error": 1.0847708726300117e-10
+            }
+          ],
+          "best_relative_fd_error": 2.8053375394662196e-15
+        },
+        "boundary_value": {
+          "runtime_gradient": 0.21840240604485442,
+          "independent_direct_adjoint_gradient": 0.21840240604485206,
+          "direct_absolute_error": 2.3592239273284576e-15,
+          "steps": [
+            {
+              "step": 0.01,
+              "central_difference": 0.21840240604485261,
+              "absolute_error": 1.8041124150158794e-15,
+              "relative_error": 8.260496977516628e-15
+            },
+            {
+              "step": 0.001,
+              "central_difference": 0.21840240604485694,
+              "absolute_error": 2.525757381022231e-15,
+              "relative_error": 1.1564695768523147e-14
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.21840240604477715,
+              "absolute_error": 7.72715225139109e-14,
+              "relative_error": 3.5380343977548146e-13
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.21840240604538427,
+              "absolute_error": 5.29853938502356e-13,
+              "relative_error": 2.4260444200063056e-12
+            },
+            {
+              "step": 1e-06,
+              "central_difference": 0.21840240604399652,
+              "absolute_error": 8.578970867034741e-13,
+              "relative_error": 3.928056939662484e-12
+            }
+          ],
+          "best_relative_fd_error": 8.260496977516628e-15
+        }
+      },
+      "gates": {
+        "relative_forward_error_max": 1e-07,
+        "relative_adjoint_error_max": 1e-07,
+        "relative_direct_gradient_error_max": 1e-07,
+        "best_relative_fd_error_max": 1e-05
+      },
+      "passed": true
+    },
+    {
+      "family": "elasticity",
+      "n": 6,
+      "ndofs": 84,
+      "nonzeros": 854,
+      "parameters": {
+        "material": 1.7,
+        "source": 0.8,
+        "boundary_value": 0.13,
+        "contrast": 3.5
+      },
+      "target": 0.07,
+      "boundary": "left",
+      "identity": {
+        "schema": "solvetide-system-v1",
+        "operator": "c19d046ccedac312a81b46961ab379bc8d5925892f5ffb33e6839861dfc2fa6c",
+        "rhs": "7f52ff3b775b65289ca5a00b8cccbe9643cd8748f2b32bbd0efdc064f8e669d3",
+        "mapping": "ce342fa6da42b74a603a00df05578a3a4a4584c25a3c3d73c5a549f3c85f11c4",
+        "precision": "float64",
+        "boundary": "becc2405097d9857c4146d0d83bac6e91b2cbc7c8fc8eb52ef3dd6da422cf792"
+      },
+      "status": "converged",
+      "adjoint_status": "converged",
+      "objective": 0.1868929265130126,
+      "reference_objective": 0.18689292651301187,
+      "relative_forward_error_vs_refined_lu": 5.757036155949574e-14,
+      "relative_adjoint_error_vs_refined_lu": 1.2109893892529117e-14,
+      "independent_forward_residual": {
+        "residual_l2": 1.5796695949225976e-12,
+        "relative_residual_l2": 5.641896769062156e-12,
+        "backward_error_inf": 8.427793472303997e-15
+      },
+      "independent_adjoint_residual": {
+        "residual_l2": 2.0820533020143378e-13,
+        "relative_residual_l2": 3.1211889194742495e-12,
+        "backward_error_inf": 1.3246845597440517e-15
+      },
+      "gradients": {
+        "material": {
+          "runtime_gradient": -0.2048442415485111,
+          "independent_direct_adjoint_gradient": -0.20484424154851205,
+          "direct_absolute_error": 9.43689570931383e-16,
+          "steps": [
+            {
+              "step": 0.01,
+              "central_difference": -0.20485798476997802,
+              "absolute_error": 1.3743221466910871e-05,
+              "relative_error": 6.708657942887732e-05
+            },
+            {
+              "step": 0.001,
+              "central_difference": -0.2048443789739035,
+              "absolute_error": 1.3742539239913754e-07,
+              "relative_error": 6.708770486528463e-07
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.20484424295391657,
+              "absolute_error": 1.405405458676512e-09,
+              "relative_error": 6.8608491916108344e-09
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.20484424115840835,
+              "absolute_error": 3.9010275565409813e-10,
+              "relative_error": 1.9043872197975073e-09
+            },
+            {
+              "step": 1e-06,
+              "central_difference": -0.20484424526068246,
+              "absolute_error": 3.712171348091431e-09,
+              "relative_error": 1.81219215768906e-08
+            }
+          ],
+          "best_relative_fd_error": 1.9043872197975073e-09
+        },
+        "contrast": {
+          "runtime_gradient": -0.0029155937685468505,
+          "independent_direct_adjoint_gradient": -0.0029155937685464046,
+          "direct_absolute_error": 4.458239333260394e-16,
+          "steps": [
+            {
+              "step": 0.01,
+              "central_difference": -0.0029156140106775807,
+              "absolute_error": 2.0242130730277474e-08,
+              "relative_error": 6.942664789010689e-06
+            },
+            {
+              "step": 0.001,
+              "central_difference": -0.002915593968380592,
+              "absolute_error": 1.9983374156817835e-10,
+              "relative_error": 6.853963334242044e-08
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.002915593814156736,
+              "absolute_error": 4.560988565993629e-11,
+              "relative_error": 1.5643429286506367e-08
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.0029155943118142065,
+              "absolute_error": 5.432673560144818e-10,
+              "relative_error": 1.8633160100948265e-07
+            },
+            {
+              "step": 1e-06,
+              "central_difference": -0.0029155917263823383,
+              "absolute_error": 2.0421645121476706e-09,
+              "relative_error": 7.004283429942635e-07
+            }
+          ],
+          "best_relative_fd_error": 1.5643429286506367e-08
+        },
+        "source": {
+          "runtime_gradient": 0.43529401329058504,
+          "independent_direct_adjoint_gradient": 0.43529401329058537,
+          "direct_absolute_error": 3.3306690738754696e-16,
+          "steps": [
+            {
+              "step": 0.01,
+              "central_difference": 0.43529401329058387,
+              "absolute_error": 1.1657341758564144e-15,
+              "relative_error": 2.6780386135892397e-15
+            },
+            {
+              "step": 0.001,
+              "central_difference": 0.4352940132905797,
+              "absolute_error": 5.329070518200751e-15,
+              "relative_error": 1.224246223355081e-14
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.4352940132905381,
+              "absolute_error": 4.696243394164412e-14,
+              "relative_error": 1.0788669843316651e-13
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.4352940132901217,
+              "absolute_error": 4.633515793273091e-13,
+              "relative_error": 1.0644565860775896e-12
+            },
+            {
+              "step": 1e-06,
+              "central_difference": 0.4352940133067751,
+              "absolute_error": 1.619004930120127e-11,
+              "relative_error": 3.719336541803361e-11
+            }
+          ],
+          "best_relative_fd_error": 2.6780386135892397e-15
+        },
+        "boundary_value": {
+          "runtime_gradient": 0.38891153777215137,
+          "independent_direct_adjoint_gradient": 0.38891153777214493,
+          "direct_absolute_error": 6.439293542825908e-15,
+          "steps": [
+            {
+              "step": 0.01,
+              "central_difference": 0.388911537772145,
+              "absolute_error": 6.38378239159465e-15,
+              "relative_error": 1.6414484456191856e-14
+            },
+            {
+              "step": 0.001,
+              "central_difference": 0.3889115377721519,
+              "absolute_error": 5.551115123125783e-16,
+              "relative_error": 1.4273464744514637e-15
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.3889115377719854,
+              "absolute_error": 1.659783421814609e-13,
+              "relative_error": 4.2677659586098823e-13
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.3889115377742058,
+              "absolute_error": 2.054412195917621e-12,
+              "relative_error": 5.2824665672695245e-12
+            },
+            {
+              "step": 1e-06,
+              "central_difference": 0.38891153776587917,
+              "absolute_error": 6.272204977619822e-12,
+              "relative_error": 1.612758781482711e-11
+            }
+          ],
+          "best_relative_fd_error": 1.4273464744514637e-15
+        }
+      },
+      "gates": {
+        "relative_forward_error_max": 1e-07,
+        "relative_adjoint_error_max": 1e-07,
+        "relative_direct_gradient_error_max": 1e-07,
+        "best_relative_fd_error_max": 1e-05
+      },
+      "passed": true
+    },
+    {
+      "family": "elasticity",
+      "n": 10,
+      "ndofs": 220,
+      "nonzeros": 2390,
+      "parameters": {
+        "material": 1.7,
+        "source": 0.8,
+        "boundary_value": 0.13,
+        "contrast": 3.5
+      },
+      "target": 0.07,
+      "boundary": "left",
+      "identity": {
+        "schema": "solvetide-system-v1",
+        "operator": "8c8ed13618bd963cd877a63e06e98ed5018ee01d09621ead3158f71a5ce9698e",
+        "rhs": "8cb6b170acc2020a30625bd6e99592fa115d39273990910d03a25fff616f394c",
+        "mapping": "e65e05436fd8a2776568b5dd510b765993116e2692c4c254deecb426a741177b",
+        "precision": "float64",
+        "boundary": "4b8ecc7fee77c50a7c611799dbc58b28911648446c467d41d213362efb23848e"
+      },
+      "status": "converged",
+      "adjoint_status": "converged",
+      "objective": 0.18907782695579173,
+      "reference_objective": 0.1890778269557924,
+      "relative_forward_error_vs_refined_lu": 1.0388129811102025e-13,
+      "relative_adjoint_error_vs_refined_lu": 1.4842959305506353e-14,
+      "independent_forward_residual": {
+        "residual_l2": 2.6289415959056074e-12,
+        "relative_residual_l2": 8.724694669170475e-12,
+        "backward_error_inf": 7.456733276095104e-15
+      },
+      "independent_adjoint_residual": {
+        "residual_l2": 2.8940796446383144e-13,
+        "relative_residual_l2": 6.9804998172311454e-12,
+        "backward_error_inf": 1.2098715981493134e-15
+      },
+      "gradients": {
+        "material": {
+          "runtime_gradient": -0.20749375618799668,
+          "independent_direct_adjoint_gradient": -0.20749375618799656,
+          "direct_absolute_error": 1.1102230246251565e-16,
+          "steps": [
+            {
+              "step": 0.01,
+              "central_difference": -0.2075076855119637,
+              "absolute_error": 1.3929323967015739e-05,
+              "relative_error": 6.712678584722904e-05
+            },
+            {
+              "step": 0.001,
+              "central_difference": -0.20749389547411456,
+              "absolute_error": 1.392861178894922e-07,
+              "relative_error": 6.712781480690285e-07
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.20749375764128608,
+              "absolute_error": 1.4532894054841705e-09,
+              "relative_error": 7.004015070162295e-09
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.20749375537615353,
+              "absolute_error": 8.118431482628807e-10,
+              "relative_error": 3.912614833225739e-09
+            },
+            {
+              "step": 1e-06,
+              "central_difference": -0.20749378107365324,
+              "absolute_error": 2.4885656563222724e-08,
+              "relative_error": 1.1993446952701278e-07
+            }
+          ],
+          "best_relative_fd_error": 3.912614833225739e-09
+        },
+        "contrast": {
+          "runtime_gradient": -0.0027390735210784996,
+          "independent_direct_adjoint_gradient": -0.002739073521075842,
+          "direct_absolute_error": 2.6575963651964685e-15,
+          "steps": [
+            {
+              "step": 0.01,
+              "central_difference": -0.002739092983781999,
+              "absolute_error": 1.9462703499187328e-08,
+              "relative_error": 7.105528587172761e-06
+            },
+            {
+              "step": 0.001,
+              "central_difference": -0.002739073701366057,
+              "absolute_error": 1.8028755745247427e-10,
+              "relative_error": 6.58206302964975e-08
+            },
+            {
+              "step": 0.0001,
+              "central_difference": -0.0027390736320742626,
+              "absolute_error": 1.1099576292805668e-10,
+              "relative_error": 4.0523103003989394e-08
+            },
+            {
+              "step": 1e-05,
+              "central_difference": -0.002739075184721162,
+              "absolute_error": 1.6636426624326572e-09,
+              "relative_error": 6.073738580498352e-07
+            },
+            {
+              "step": 1e-06,
+              "central_difference": -0.0027390634343982256,
+              "absolute_error": 1.0086680274010162e-08,
+              "relative_error": 3.6825153455678585e-06
+            }
+          ],
+          "best_relative_fd_error": 4.0523103003989394e-08
+        },
+        "source": {
+          "runtime_gradient": 0.4409242318994548,
+          "independent_direct_adjoint_gradient": 0.440924231899455,
+          "direct_absolute_error": 2.220446049250313e-16,
+          "steps": [
+            {
+              "step": 0.01,
+              "central_difference": 0.4409242318994533,
+              "absolute_error": 1.4988010832439613e-15,
+              "relative_error": 3.3992259322815744e-15
+            },
+            {
+              "step": 0.001,
+              "central_difference": 0.4409242318994394,
+              "absolute_error": 1.5376588891058418e-14,
+              "relative_error": 3.487354012007393e-14
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.44092423189909247,
+              "absolute_error": 3.6232128408641984e-13,
+              "relative_error": 8.217313948148828e-13
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.4409242318967332,
+              "absolute_error": 2.7216007225661087e-12,
+              "relative_error": 6.172490703996335e-12
+            },
+            {
+              "step": 1e-06,
+              "central_difference": 0.4409242319314277,
+              "absolute_error": 3.1972924308121264e-11,
+              "relative_error": 7.251342065748311e-11
+            }
+          ],
+          "best_relative_fd_error": 3.3992259322815744e-15
+        },
+        "boundary_value": {
+          "runtime_gradient": 0.3860092863871776,
+          "independent_direct_adjoint_gradient": 0.38600928638718757,
+          "direct_absolute_error": 9.992007221626409e-15,
+          "steps": [
+            {
+              "step": 0.01,
+              "central_difference": 0.3860092863871886,
+              "absolute_error": 1.1046719095020308e-14,
+              "relative_error": 2.8617754765463956e-14
+            },
+            {
+              "step": 0.001,
+              "central_difference": 0.3860092863872122,
+              "absolute_error": 3.4638958368304884e-14,
+              "relative_error": 8.973607524446441e-14
+            },
+            {
+              "step": 0.0001,
+              "central_difference": 0.38600928638693466,
+              "absolute_error": 2.4291679778798425e-13,
+              "relative_error": 6.293029892144414e-13
+            },
+            {
+              "step": 1e-05,
+              "central_difference": 0.3860092863905428,
+              "absolute_error": 3.3652525210925432e-12,
+              "relative_error": 8.718061040862543e-12
+            },
+            {
+              "step": 1e-06,
+              "central_difference": 0.3860092863822162,
+              "absolute_error": 4.9613646524448995e-12,
+              "relative_error": 1.2852967085015978e-11
+            }
+          ],
+          "best_relative_fd_error": 2.8617754765463956e-14
+        }
+      },
+      "gates": {
+        "relative_forward_error_max": 1e-07,
+        "relative_adjoint_error_max": 1e-07,
+        "relative_direct_gradient_error_max": 1e-07,
+        "best_relative_fd_error_max": 1e-05
+      },
+      "passed": true
+    }
+  ],
+  "heat_analytic_refinement": {
+    "family": "heat",
+    "analytic_solution": "T=0.13+(0.8/1.7)*(x-x^2/2)",
+    "equations": "-1.7*Laplacian(T)=0.8; T(0,y)=0.13; zero normal flux on other edges",
+    "rows": [
+      {
+        "n": 8,
+        "ndofs": 72,
+        "nodal_rms_error": 0.00029349178414024357,
+        "max_absolute_error": 0.0012617671650745899,
+        "observed_order": null
+      },
+      {
+        "n": 16,
+        "ndofs": 272,
+        "nodal_rms_error": 6.580780793874064e-05,
+        "max_absolute_error": 0.000383241487594832,
+        "observed_order": 2.15698944629072
+      },
+      {
+        "n": 32,
+        "ndofs": 1056,
+        "nodal_rms_error": 1.524979239263294e-05,
+        "max_absolute_error": 0.00011272178046500825,
+        "observed_order": 2.109469164154166
+      },
+      {
+        "n": 64,
+        "ndofs": 4160,
+        "nodal_rms_error": 3.6477119748314237e-06,
+        "max_absolute_error": 3.2405996658824154e-05,
+        "observed_order": 2.063725879083877
+      }
+    ],
+    "minimum_expected_order": 1.7,
+    "passed": true
+  },
+  "elasticity_refinement": {
+    "family": "elasticity",
+    "reference_n": 64,
+    "reference_ndofs": 8320,
+    "parameters": {
+      "material": 1.7,
+      "contrast": 1.0,
+      "source": 0.8,
+      "boundary_value": 0.13
+    },
+    "rows": [
+      {
+        "n": 8,
+        "ndofs": 144,
+        "vector_nodal_rms_difference_to_reference": 0.03487657088293609,
+        "relative_vector_difference_to_reference": 0.05084106275591801,
+        "free_dof_mean_square_objective": 0.23856641113538876
+      },
+      {
+        "n": 16,
+        "ndofs": 544,
+        "vector_nodal_rms_difference_to_reference": 0.011355611397931516,
+        "relative_vector_difference_to_reference": 0.016739316372160532,
+        "free_dof_mean_square_objective": 0.23627871957575522
+      },
+      {
+        "n": 32,
+        "ndofs": 2112,
+        "vector_nodal_rms_difference_to_reference": 0.002934301461229067,
+        "relative_vector_difference_to_reference": 0.004350360993734565,
+        "free_dof_mean_square_objective": 0.23245803297578504
+      }
+    ],
+    "rigid_translation_max_error": 1.1429746038515987e-13,
+    "limit": "Nested-node comparison against n=64 is a consistency/refinement observation, not an error bound. Clamped/free corners reduce regularity. The nodal-mean objective also changes quadrature with mesh resolution.",
+    "passed": true
+  },
+  "conditioning_stress": [
+    {
+      "family": "heat",
+      "n": 6,
+      "contrast": 1.0,
+      "spectral_estimate": {
+        "method": "dense symmetric eigensolver on the stored small matrix",
+        "lambda_min_estimate": 0.04959844140506782,
+        "lambda_max_estimate": 7.524319449590076,
+        "condition_2_estimate": 151.70475596479656,
+        "limit": "Floating-point estimates, not rigorous enclosures; accuracy degrades at high condition numbers."
+      },
+      "manufactured_bad_candidate": {
+        "relative_solution_error": 0.09999999999999994,
+        "residual_l2": 0.004959844140506712,
+        "relative_residual_l2": 0.0006591751152693182,
+        "backward_error_inf": 0.00022375286902365796,
+        "satisfies_relative_residual_1e_9": false,
+        "description": "Chosen field is the largest eigenmode; add 10% smallest-mode error. Manufactured RHS, not the physical uniform source. This is not a runtime-returned field."
+      },
+      "physical_runtime": {
+        "status": "converged",
+        "accepted": true,
+        "relative_forward_error_vs_refined_lu": 7.0416959046243595e-12,
+        "returned_field_on_failure": null,
+        "diagnostics": {
+          "residual_l2": 5.3207443307250655e-11,
+          "relative_residual_l2": 1.427166119630247e-10,
+          "backward_error_inf": 3.848107975431347e-12
+        }
+      }
+    },
+    {
+      "family": "heat",
+      "n": 6,
+      "contrast": 10000.0,
+      "spectral_estimate": {
+        "method": "dense symmetric eigensolver on the stored small matrix",
+        "lambda_min_estimate": 0.05802418307940291,
+        "lambda_max_estimate": 65102.81428051888,
+        "condition_2_estimate": 1121994.4999730415,
+        "limit": "Floating-point estimates, not rigorous enclosures; accuracy degrades at high condition numbers."
+      },
+      "manufactured_bad_candidate": {
+        "relative_solution_error": 0.10000000000000005,
+        "residual_l2": 0.005802418308173539,
+        "relative_residual_l2": 8.912699661756145e-08,
+        "backward_error_inf": 1.8528995873448155e-08,
+        "satisfies_relative_residual_1e_9": false,
+        "description": "Chosen field is the largest eigenmode; add 10% smallest-mode error. Manufactured RHS, not the physical uniform source. This is not a runtime-returned field."
+      },
+      "physical_runtime": {
+        "status": "converged",
+        "accepted": true,
+        "relative_forward_error_vs_refined_lu": 2.4488516632254965e-13,
+        "returned_field_on_failure": null,
+        "diagnostics": {
+          "residual_l2": 8.230613267716012e-12,
+          "relative_residual_l2": 2.207670895147631e-11,
+          "backward_error_inf": 1.2024123474886057e-16
+        }
+      }
+    },
+    {
+      "family": "heat",
+      "n": 6,
+      "contrast": 100000000.0,
+      "spectral_estimate": {
+        "method": "dense symmetric eigensolver on the stored small matrix",
+        "lambda_min_estimate": 0.05802565437203519,
+        "lambda_max_estimate": 651026577.7097373,
+        "condition_2_estimate": 11219633535.464138,
+        "limit": "Floating-point estimates, not rigorous enclosures; accuracy degrades at high condition numbers."
+      },
+      "manufactured_bad_candidate": {
+        "relative_solution_error": 0.10000000000000007,
+        "residual_l2": 0.00580256698718021,
+        "relative_residual_l2": 8.912949464510667e-12,
+        "backward_error_inf": 1.852953349949259e-12,
+        "satisfies_relative_residual_1e_9": true,
+        "description": "Chosen field is the largest eigenmode; add 10% smallest-mode error. Manufactured RHS, not the physical uniform source. This is not a runtime-returned field."
+      },
+      "physical_runtime": {
+        "status": "residual_rejected",
+        "accepted": false,
+        "relative_forward_error_vs_refined_lu": null,
+        "returned_field_on_failure": false,
+        "diagnostics": null
+      }
+    },
+    {
+      "family": "elasticity",
+      "n": 6,
+      "contrast": 1.0,
+      "spectral_estimate": {
+        "method": "dense symmetric eigensolver on the stored small matrix",
+        "lambda_min_estimate": 0.009214366956444937,
+        "lambda_max_estimate": 9.960058690996085,
+        "condition_2_estimate": 1080.9270716128337,
+        "limit": "Floating-point estimates, not rigorous enclosures; accuracy degrades at high condition numbers."
+      },
+      "manufactured_bad_candidate": {
+        "relative_solution_error": 0.09999999999999992,
+        "residual_l2": 0.0009214366956445456,
+        "relative_residual_l2": 9.251317931264058e-05,
+        "backward_error_inf": 4.816938246912187e-05,
+        "satisfies_relative_residual_1e_9": false,
+        "description": "Chosen field is the largest eigenmode; add 10% smallest-mode error. Manufactured RHS, not the physical uniform source. This is not a runtime-returned field."
+      },
+      "physical_runtime": {
+        "status": "converged",
+        "accepted": true,
+        "relative_forward_error_vs_refined_lu": 7.800314050412358e-12,
+        "returned_field_on_failure": null,
+        "diagnostics": {
+          "residual_l2": 1.214225244827453e-10,
+          "relative_residual_l2": 5.961234795363508e-10,
+          "backward_error_inf": 1.4255246216995318e-12
+        }
+      }
+    },
+    {
+      "family": "elasticity",
+      "n": 6,
+      "contrast": 10000.0,
+      "spectral_estimate": {
+        "method": "dense symmetric eigensolver on the stored small matrix",
+        "lambda_min_estimate": 0.010413732240681633,
+        "lambda_max_estimate": 84303.56031262943,
+        "condition_2_estimate": 8095422.310100737,
+        "limit": "Floating-point estimates, not rigorous enclosures; accuracy degrades at high condition numbers."
+      },
+      "manufactured_bad_candidate": {
+        "relative_solution_error": 0.09999999999999998,
+        "residual_l2": 0.0010413732253209689,
+        "relative_residual_l2": 1.2352660094771374e-08,
+        "backward_error_inf": 3.6562803272384113e-09,
+        "satisfies_relative_residual_1e_9": false,
+        "description": "Chosen field is the largest eigenmode; add 10% smallest-mode error. Manufactured RHS, not the physical uniform source. This is not a runtime-returned field."
+      },
+      "physical_runtime": {
+        "status": "converged",
+        "accepted": true,
+        "relative_forward_error_vs_refined_lu": 2.4243877118798914e-12,
+        "returned_field_on_failure": null,
+        "diagnostics": {
+          "residual_l2": 1.6559446803449166e-10,
+          "relative_residual_l2": 8.129854892839096e-10,
+          "backward_error_inf": 2.739410877786215e-16
+        }
+      }
+    },
+    {
+      "family": "elasticity",
+      "n": 6,
+      "contrast": 100000000.0,
+      "spectral_estimate": {
+        "method": "dense symmetric eigensolver on the stored small matrix",
+        "lambda_min_estimate": 0.010413912142114314,
+        "lambda_max_estimate": 843033001.4831289,
+        "condition_2_estimate": 80952574784.44308,
+        "limit": "Floating-point estimates, not rigorous enclosures; accuracy degrades at high condition numbers."
+      },
+      "manufactured_bad_candidate": {
+        "relative_solution_error": 0.10000000000000003,
+        "residual_l2": 0.001041394904628725,
+        "relative_residual_l2": 1.2352955374186096e-12,
+        "backward_error_inf": 3.6563132391569217e-13,
+        "satisfies_relative_residual_1e_9": true,
+        "description": "Chosen field is the largest eigenmode; add 10% smallest-mode error. Manufactured RHS, not the physical uniform source. This is not a runtime-returned field."
+      },
+      "physical_runtime": {
+        "status": "residual_rejected",
+        "accepted": false,
+        "relative_forward_error_vs_refined_lu": null,
+        "returned_field_on_failure": false,
+        "diagnostics": null
+      }
+    }
+  ],
+  "failure_and_restart_checks": {
+    "initial_forward_accepted": true,
+    "cancel_status": "cancelled",
+    "cancel_returns_no_field": true,
+    "cancel_gradient_status": "forward_failed",
+    "cancel_returns_no_gradient": true,
+    "max_work_status": "max_work",
+    "max_work_returns_no_field": true,
+    "max_work_gradient_status": "forward_failed",
+    "max_work_returns_no_gradient": true,
+    "changed_operator_gradient_status": "stale_forward",
+    "changed_operator_returns_no_gradient": true,
+    "changed_mesh_cache_event": "mapping_invalidated",
+    "changed_mesh_accepted": true,
+    "changed_mesh_relative_error_vs_lu": 3.6499667594320945e-11,
+    "passed": true
+  },
+  "small_residual_large_error_demonstrated": true,
+  "reference_method": "Independent SciPy SuperLU with up to three residual refinement steps. Small nDOF<=512 cases use 60-digit Decimal residuals on stored binary64 values; larger mesh-refinement cases use longdouble. Central differences independently reassemble both perturbed inputs.",
+  "limits": [
+    "Numerical reference agreement is not a rigorous solution enclosure.",
+    "The residual and backward error concern stored discrete equations, not discretization or model error.",
+    "Gradient finite differences hold target and mesh/constraints fixed.",
+    "This is a correctness study, not evidence of acceleration."
+  ],
+  "elapsed_seconds": 66.68045329197776,
+  "passed": true
+}

@@ -1,0 +1,16 @@
+heat direct RSS=74235904
+heat warm RSS=67338240
+heat gcrot RSS=69468160
+heat fixed RSS=67338240
+heat joint RSS=67108864
+heat learned RSS=67207168
+heat amg_reuse RSS=74170368
+heat separate RSS=67338240
+elasticity direct RSS=97271808
+elasticity warm RSS=79282176
+elasticity gcrot RSS=85049344
+elasticity fixed RSS=79052800
+elasticity joint RSS=83886080
+elasticity learned RSS=79560704
+elasticity amg_reuse RSS=89227264
+elasticity separate RSS=80871424

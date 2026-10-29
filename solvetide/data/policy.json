@@ -1,0 +1,263 @@
+{
+  "schema_version": 2,
+  "features": [
+    "operator_drift",
+    "residual_projection",
+    "previous_primal_reduction",
+    "previous_adjoint_reduction",
+    "previous_primal_iterations",
+    "previous_adjoint_iterations",
+    "available_primal_rank",
+    "available_adjoint_rank",
+    "dimension"
+  ],
+  "actions": [
+    "skip",
+    "balanced",
+    "forward",
+    "adjoint",
+    "primal_only",
+    "adjoint_only"
+  ],
+  "mean": [
+    0.5042547505447291,
+    0.5848571725127437,
+    0.33049080324318786,
+    0.374150148951819,
+    3.062099808768214,
+    3.2541112029582653,
+    0.9036281378608321,
+    0.9355857633309338,
+    5.271231591884549
+  ],
+  "scale": [
+    0.6896463531618923,
+    0.3750490121173944,
+    0.42843351634561083,
+    0.43904047782900174,
+    1.9758548403403533,
+    1.9325381299263338,
+    0.7442064979254075,
+    0.7882337224752843,
+    0.6425070307846242
+  ],
+  "weights": [
+    [
+      -1.5517263671388963,
+      0.031182848252794337,
+      0.017944967581548066,
+      -1.0089774852006572e-13,
+      1.5181696488992176e-13,
+      0.1376662062179973,
+      -0.09761359238909778,
+      -0.6515915375606985,
+      0.43286311740214106,
+      0.6988307928022092
+    ],
+    [
+      -1.1884839066436692,
+      -0.05205945893923757,
+      0.10472530617488278,
+      0.21100889379300522,
+      -0.3462862468984979,
+      0.006801666016642757,
+      0.4163856411827014,
+      -0.698876050723763,
+      0.342983455725645,
+      0.6740388040731965
+    ],
+    [
+      -1.4485176352876408,
+      0.11315534681550286,
+      0.15697137580082565,
+      0.06571437810713798,
+      -0.11389831474077103,
+      -0.026666261915495818,
+      0.14744731161385893,
+      -0.35930745890182897,
+      0.16898686893807147,
+      0.6579616090594556
+    ],
+    [
+      -1.0681858038330352,
+      -0.12272372248161716,
+      0.0025263432179632927,
+      0.06524916072945676,
+      -0.27460523744781895,
+      -0.13122975490905953,
+      0.3378718928120111,
+      0.12000187083874,
+      0.14402434561519567,
+      0.7368142072298497
+    ],
+    [
+      -1.47762483273118,
+      0.08279481353730749,
+      -0.01701608448725844,
+      0.045330177000025264,
+      1.315049698262317e-13,
+      0.1542926619164664,
+      0.16102663853016289,
+      -0.20479561919049208,
+      1.480945486642524e-13,
+      0.5314780785670081
+    ],
+    [
+      -1.350059597849549,
+      0.016416693822213533,
+      -0.1448192488346366,
+      -8.501251840495245e-14,
+      -0.0013467412723817572,
+      -0.04873091325435971,
+      -0.11122609460300993,
+      9.514802691289003e-14,
+      0.22462174485952635,
+      0.7254742421213475
+    ]
+  ],
+  "refresh_margin": 0.05,
+  "enabled": false,
+  "training": {
+    "split": "development-training-only",
+    "trajectory_names": [
+      "development-heat-101",
+      "development-heat-102",
+      "development-heat-103",
+      "development-elasticity-101",
+      "development-elasticity-102",
+      "development-elasticity-103"
+    ],
+    "protocol_sha256": "035463d61975fa9ac937f9ee731fb59301e98d2d9c6327863b1a2027da742fbe",
+    "source_sha256": {
+      "solvetide/runtime.py": "98108d59c3532d04b15ee37c2211f73765c04d4fa90c610d14f11a0b4f549e28",
+      "solvetide/assembly.py": "31d7c447c7b444b8a23fb06fd1a253d7284a710f8ee77eefc3ffc0994ff6f8dd",
+      "solvetide/policy.py": "e4ab1d254843c8d52e79292da68dc2558a53c05a4ad63e471810b03668acd59a",
+      "studies/run.py": "c0a3bac266f04d672cc304427c8fdfa4ddf2a187e4d635ec375a050ff15d4f96"
+    },
+    "records": 720,
+    "data_origin": "original synthetic finite-element solves",
+    "target": "complete forward-adjoint pair incl assembly, all overhead and failure penalty"
+  },
+  "license": "MIT",
+  "model": "per-joint-action ridge log complete-pair seconds",
+  "action_semantics": "Quota capacity, not a claim that all slots contain valid vectors; actual used rank reported separately.",
+  "development_validation": {
+    "median_seconds": {
+      "learned": 6.240293479480897,
+      "warm": 4.410495061980328,
+      "joint": 5.246992250991752
+    },
+    "family_median_seconds": {
+      "heat": {
+        "learned": 3.86882716693799,
+        "warm": 4.145971748017473,
+        "joint": 3.7714830399490893
+      },
+      "elasticity": {
+        "learned": 6.859044041921152,
+        "warm": 5.09128195696394,
+        "joint": 7.296146624023095
+      }
+    },
+    "runs": {
+      "learned": [
+        {
+          "trajectory": "development-heat-104",
+          "seconds": 2.5170022920065094,
+          "failures": 0
+        },
+        {
+          "trajectory": "development-heat-104",
+          "seconds": 3.86882716693799,
+          "failures": 0
+        },
+        {
+          "trajectory": "development-heat-104",
+          "seconds": 5.803385000908747,
+          "failures": 0
+        },
+        {
+          "trajectory": "development-elasticity-104",
+          "seconds": 7.560573665075935,
+          "failures": 0
+        },
+        {
+          "trajectory": "development-elasticity-104",
+          "seconds": 6.859044041921152,
+          "failures": 0
+        },
+        {
+          "trajectory": "development-elasticity-104",
+          "seconds": 6.677201958053047,
+          "failures": 0
+        }
+      ],
+      "warm": [
+        {
+          "trajectory": "development-heat-104",
+          "seconds": 3.0146514179941732,
+          "failures": 0
+        },
+        {
+          "trajectory": "development-heat-104",
+          "seconds": 4.145971748017473,
+          "failures": 0
+        },
+        {
+          "trajectory": "development-heat-104",
+          "seconds": 4.240845249965787,
+          "failures": 0
+        },
+        {
+          "trajectory": "development-elasticity-104",
+          "seconds": 7.163020667998353,
+          "failures": 0
+        },
+        {
+          "trajectory": "development-elasticity-104",
+          "seconds": 5.09128195696394,
+          "failures": 0
+        },
+        {
+          "trajectory": "development-elasticity-104",
+          "seconds": 4.580144873994868,
+          "failures": 0
+        }
+      ],
+      "joint": [
+        {
+          "trajectory": "development-heat-104",
+          "seconds": 3.7714830399490893,
+          "failures": 0
+        },
+        {
+          "trajectory": "development-heat-104",
+          "seconds": 4.5931068760110065,
+          "failures": 0
+        },
+        {
+          "trajectory": "development-heat-104",
+          "seconds": 2.964139999996405,
+          "failures": 0
+        },
+        {
+          "trajectory": "development-elasticity-104",
+          "seconds": 7.296146624023095,
+          "failures": 0
+        },
+        {
+          "trajectory": "development-elasticity-104",
+          "seconds": 5.900877625972498,
+          "failures": 0
+        },
+        {
+          "trajectory": "development-elasticity-104",
+          "seconds": 7.568511332996422,
+          "failures": 0
+        }
+      ]
+    },
+    "gate": "at least 5% faster than warm and joint, zero failures"
+  },
+  "training_seconds": 425.4995944170223
+}

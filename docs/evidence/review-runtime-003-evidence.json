@@ -1,0 +1,143 @@
+{
+  "hashes": {
+    "studies/run.py": "3b9cec7ca67f5f8d7e1fc9e69a3666ff8f8383c708420ef71393075ed6e80e68",
+    "solvetide/policy.py": "e4ab1d254843c8d52e79292da68dc2558a53c05a4ad63e471810b03668acd59a",
+    "solvetide/runtime.py": "9aabcf3375ddbc2bcde1e709d3a67cd0e099a5808a85117b592b4c4b2fe52bdc",
+    "solvetide/assembly.py": "31d7c447c7b444b8a23fb06fd1a253d7284a710f8ee77eefc3ffc0994ff6f8dd"
+  },
+  "checks": {
+    "complex_target": {
+      "status": "invalid_input",
+      "gradient_is_none": true,
+      "warnings": []
+    },
+    "huge_finite": {
+      "status": "invalid_input",
+      "field_is_none": true,
+      "strict_json": true
+    },
+    "paired_contract": {
+      "events": [
+        {
+          "calls": 1,
+          "roles": [
+            "primal",
+            "adjoint"
+          ],
+          "used_ranks": [
+            0,
+            1
+          ],
+          "operator_event": "empty"
+        },
+        {
+          "calls": 2,
+          "roles": [
+            "primal",
+            "adjoint",
+            "primal",
+            "adjoint"
+          ],
+          "used_ranks": [
+            2,
+            2
+          ],
+          "operator_event": "operator_refreshed"
+        },
+        {
+          "calls": 3,
+          "roles": [
+            "adjoint",
+            "primal",
+            "adjoint",
+            "primal"
+          ],
+          "used_ranks": [
+            2,
+            2
+          ],
+          "operator_event": "operator_refreshed"
+        },
+        {
+          "calls": 4,
+          "roles": [
+            "adjoint",
+            "primal",
+            "adjoint",
+            "primal"
+          ],
+          "used_ranks": [
+            2,
+            2
+          ],
+          "operator_event": "operator_refreshed"
+        },
+        {
+          "calls": 5,
+          "roles": [
+            "adjoint",
+            "primal",
+            "adjoint",
+            "primal"
+          ],
+          "used_ranks": [
+            2,
+            2
+          ],
+          "operator_event": "operator_refreshed"
+        }
+      ],
+      "orthogonality_error": 3.0992530573945065e-16,
+      "mapping_event": "mapping_invalidated",
+      "mapping_reused_rank": 0
+    },
+    "failure_penalty": {
+      "predicted_failed_action_seconds": 29.99999999999999,
+      "failure_rows_retained": 10
+    },
+    "action_contract": {
+      "skip": {
+        "primal_rank": 6,
+        "adjoint_rank": 6,
+        "primal_quota": 6,
+        "adjoint_quota": 6,
+        "refresh": false
+      },
+      "balanced": {
+        "primal_rank": 6,
+        "adjoint_rank": 6,
+        "primal_quota": 6,
+        "adjoint_quota": 6,
+        "refresh": true
+      },
+      "forward": {
+        "primal_rank": 9,
+        "adjoint_rank": 3,
+        "primal_quota": 9,
+        "adjoint_quota": 3,
+        "refresh": true
+      },
+      "adjoint": {
+        "primal_rank": 3,
+        "adjoint_rank": 9,
+        "primal_quota": 3,
+        "adjoint_quota": 9,
+        "refresh": true
+      },
+      "primal_only": {
+        "primal_rank": 12,
+        "adjoint_rank": 0,
+        "primal_quota": 12,
+        "adjoint_quota": 0,
+        "refresh": true
+      },
+      "adjoint_only": {
+        "primal_rank": 0,
+        "adjoint_rank": 12,
+        "primal_quota": 0,
+        "adjoint_quota": 12,
+        "refresh": true
+      }
+    }
+  }
+}

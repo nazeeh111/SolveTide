@@ -1,0 +1,233 @@
+* Getting build dependencies for sdist...
+running egg_info
+creating solvetide.egg-info
+writing solvetide.egg-info/PKG-INFO
+writing dependency_links to solvetide.egg-info/dependency_links.txt
+writing entry points to solvetide.egg-info/entry_points.txt
+writing requirements to solvetide.egg-info/requires.txt
+writing top-level names to solvetide.egg-info/top_level.txt
+writing manifest file 'solvetide.egg-info/SOURCES.txt'
+reading manifest file 'solvetide.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file 'solvetide.egg-info/SOURCES.txt'
+* Building sdist...
+running sdist
+running egg_info
+writing solvetide.egg-info/PKG-INFO
+writing dependency_links to solvetide.egg-info/dependency_links.txt
+writing entry points to solvetide.egg-info/entry_points.txt
+writing requirements to solvetide.egg-info/requires.txt
+writing top-level names to solvetide.egg-info/top_level.txt
+reading manifest file 'solvetide.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file 'solvetide.egg-info/SOURCES.txt'
+running check
+creating solvetide-0.1.0
+creating solvetide-0.1.0/solvetide
+creating solvetide-0.1.0/solvetide.egg-info
+creating solvetide-0.1.0/solvetide/data
+creating solvetide-0.1.0/solvetide/web
+creating solvetide-0.1.0/tests
+copying files to solvetide-0.1.0...
+copying LICENSE -> solvetide-0.1.0
+copying README.md -> solvetide-0.1.0
+copying pyproject.toml -> solvetide-0.1.0
+copying solvetide/__init__.py -> solvetide-0.1.0/solvetide
+copying solvetide/__main__.py -> solvetide-0.1.0/solvetide
+copying solvetide/artifacts.py -> solvetide-0.1.0/solvetide
+copying solvetide/assembly.py -> solvetide-0.1.0/solvetide
+copying solvetide/checker.py -> solvetide-0.1.0/solvetide
+copying solvetide/cli.py -> solvetide-0.1.0/solvetide
+copying solvetide/policy.py -> solvetide-0.1.0/solvetide
+copying solvetide/py.typed -> solvetide-0.1.0/solvetide
+copying solvetide/runtime.py -> solvetide-0.1.0/solvetide
+copying solvetide/server.py -> solvetide-0.1.0/solvetide
+copying solvetide.egg-info/PKG-INFO -> solvetide-0.1.0/solvetide.egg-info
+copying solvetide.egg-info/SOURCES.txt -> solvetide-0.1.0/solvetide.egg-info
+copying solvetide.egg-info/dependency_links.txt -> solvetide-0.1.0/solvetide.egg-info
+copying solvetide.egg-info/entry_points.txt -> solvetide-0.1.0/solvetide.egg-info
+copying solvetide.egg-info/requires.txt -> solvetide-0.1.0/solvetide.egg-info
+copying solvetide.egg-info/top_level.txt -> solvetide-0.1.0/solvetide.egg-info
+copying solvetide/data/policy.json -> solvetide-0.1.0/solvetide/data
+copying solvetide/web/app.js -> solvetide-0.1.0/solvetide/web
+copying solvetide/web/index.html -> solvetide-0.1.0/solvetide/web
+copying solvetide/web/style.css -> solvetide-0.1.0/solvetide/web
+copying tests/test_artifacts.py -> solvetide-0.1.0/tests
+copying tests/test_assembly.py -> solvetide-0.1.0/tests
+copying tests/test_policy.py -> solvetide-0.1.0/tests
+copying tests/test_runtime.py -> solvetide-0.1.0/tests
+copying tests/test_server.py -> solvetide-0.1.0/tests
+copying tests/test_study_protocol.py -> solvetide-0.1.0/tests
+copying tests/test_validation.py -> solvetide-0.1.0/tests
+Writing solvetide-0.1.0/setup.cfg
+Creating tar archive
+removing 'solvetide-0.1.0' (and everything under it)
+* Building wheel from sdist
+* Getting build dependencies for wheel...
+running egg_info
+writing solvetide.egg-info/PKG-INFO
+writing dependency_links to solvetide.egg-info/dependency_links.txt
+writing entry points to solvetide.egg-info/entry_points.txt
+writing requirements to solvetide.egg-info/requires.txt
+writing top-level names to solvetide.egg-info/top_level.txt
+reading manifest file 'solvetide.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file 'solvetide.egg-info/SOURCES.txt'
+* Building wheel...
+running bdist_wheel
+running build
+running build_py
+creating build/lib/solvetide
+copying solvetide/server.py -> build/lib/solvetide
+copying solvetide/policy.py -> build/lib/solvetide
+copying solvetide/__init__.py -> build/lib/solvetide
+copying solvetide/runtime.py -> build/lib/solvetide
+copying solvetide/cli.py -> build/lib/solvetide
+copying solvetide/assembly.py -> build/lib/solvetide
+copying solvetide/artifacts.py -> build/lib/solvetide
+copying solvetide/__main__.py -> build/lib/solvetide
+copying solvetide/checker.py -> build/lib/solvetide
+running egg_info
+writing solvetide.egg-info/PKG-INFO
+writing dependency_links to solvetide.egg-info/dependency_links.txt
+writing entry points to solvetide.egg-info/entry_points.txt
+writing requirements to solvetide.egg-info/requires.txt
+writing top-level names to solvetide.egg-info/top_level.txt
+reading manifest file 'solvetide.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file 'solvetide.egg-info/SOURCES.txt'
+copying solvetide/py.typed -> build/lib/solvetide
+creating build/lib/solvetide/web
+copying solvetide/web/index.html -> build/lib/solvetide/web
+copying solvetide/web/style.css -> build/lib/solvetide/web
+copying solvetide/web/app.js -> build/lib/solvetide/web
+creating build/lib/solvetide/data
+copying solvetide/data/policy.json -> build/lib/solvetide/data
+installing to build/bdist.macosx-11.0-arm64/wheel
+running install
+running install_lib
+creating build/bdist.macosx-11.0-arm64/wheel
+creating build/bdist.macosx-11.0-arm64/wheel/solvetide
+copying build/lib/solvetide/server.py -> build/bdist.macosx-11.0-arm64/wheel/./solvetide
+creating build/bdist.macosx-11.0-arm64/wheel/solvetide/web
+copying build/lib/solvetide/web/index.html -> build/bdist.macosx-11.0-arm64/wheel/./solvetide/web
+copying build/lib/solvetide/web/style.css -> build/bdist.macosx-11.0-arm64/wheel/./solvetide/web
+copying build/lib/solvetide/web/app.js -> build/bdist.macosx-11.0-arm64/wheel/./solvetide/web
+copying build/lib/solvetide/policy.py -> build/bdist.macosx-11.0-arm64/wheel/./solvetide
+copying build/lib/solvetide/__init__.py -> build/bdist.macosx-11.0-arm64/wheel/./solvetide
+copying build/lib/solvetide/runtime.py -> build/bdist.macosx-11.0-arm64/wheel/./solvetide
+copying build/lib/solvetide/cli.py -> build/bdist.macosx-11.0-arm64/wheel/./solvetide
+copying build/lib/solvetide/assembly.py -> build/bdist.macosx-11.0-arm64/wheel/./solvetide
+copying build/lib/solvetide/py.typed -> build/bdist.macosx-11.0-arm64/wheel/./solvetide
+copying build/lib/solvetide/artifacts.py -> build/bdist.macosx-11.0-arm64/wheel/./solvetide
+creating build/bdist.macosx-11.0-arm64/wheel/solvetide/data
+copying build/lib/solvetide/data/policy.json -> build/bdist.macosx-11.0-arm64/wheel/./solvetide/data
+copying build/lib/solvetide/__main__.py -> build/bdist.macosx-11.0-arm64/wheel/./solvetide
+copying build/lib/solvetide/checker.py -> build/bdist.macosx-11.0-arm64/wheel/./solvetide
+running install_egg_info
+Copying solvetide.egg-info to build/bdist.macosx-11.0-arm64/wheel/./solvetide-0.1.0-py3.12.egg-info
+running install_scripts
+creating build/bdist.macosx-11.0-arm64/wheel/solvetide-0.1.0.dist-info/WHEEL
+creating '<source>/dist/.tmp-b7hzer3h/solvetide-0.1.0-py3-none-any.whl' and adding 'build/bdist.macosx-11.0-arm64/wheel' to it
+adding 'solvetide/__init__.py'
+adding 'solvetide/__main__.py'
+adding 'solvetide/artifacts.py'
+adding 'solvetide/assembly.py'
+adding 'solvetide/checker.py'
+adding 'solvetide/cli.py'
+adding 'solvetide/policy.py'
+adding 'solvetide/py.typed'
+adding 'solvetide/runtime.py'
+adding 'solvetide/server.py'
+adding 'solvetide/data/policy.json'
+adding 'solvetide/web/app.js'
+adding 'solvetide/web/index.html'
+adding 'solvetide/web/style.css'
+adding 'solvetide-0.1.0.dist-info/licenses/LICENSE'
+adding 'solvetide-0.1.0.dist-info/METADATA'
+adding 'solvetide-0.1.0.dist-info/WHEEL'
+adding 'solvetide-0.1.0.dist-info/entry_points.txt'
+adding 'solvetide-0.1.0.dist-info/top_level.txt'
+adding 'solvetide-0.1.0.dist-info/RECORD'
+removing build/bdist.macosx-11.0-arm64/wheel
+Successfully built solvetide-0.1.0.tar.gz and solvetide-0.1.0-py3-none-any.whl
+* Getting build dependencies for sdist...
+running egg_info
+creating solvetide_design_example.egg-info
+writing solvetide_design_example.egg-info/PKG-INFO
+writing dependency_links to solvetide_design_example.egg-info/dependency_links.txt
+writing entry points to solvetide_design_example.egg-info/entry_points.txt
+writing requirements to solvetide_design_example.egg-info/requires.txt
+writing top-level names to solvetide_design_example.egg-info/top_level.txt
+writing manifest file 'solvetide_design_example.egg-info/SOURCES.txt'
+reading manifest file 'solvetide_design_example.egg-info/SOURCES.txt'
+writing manifest file 'solvetide_design_example.egg-info/SOURCES.txt'
+* Building sdist...
+running sdist
+running egg_info
+writing solvetide_design_example.egg-info/PKG-INFO
+writing dependency_links to solvetide_design_example.egg-info/dependency_links.txt
+writing entry points to solvetide_design_example.egg-info/entry_points.txt
+writing requirements to solvetide_design_example.egg-info/requires.txt
+writing top-level names to solvetide_design_example.egg-info/top_level.txt
+reading manifest file 'solvetide_design_example.egg-info/SOURCES.txt'
+writing manifest file 'solvetide_design_example.egg-info/SOURCES.txt'
+warning: sdist: standard file not found: should have one of README, README.rst, README.txt, README.md
+
+running check
+creating solvetide_design_example-0.1.0
+creating solvetide_design_example-0.1.0/solvetide_design_example.egg-info
+copying files to solvetide_design_example-0.1.0...
+copying design_app.py -> solvetide_design_example-0.1.0
+copying pyproject.toml -> solvetide_design_example-0.1.0
+copying solvetide_design_example.egg-info/PKG-INFO -> solvetide_design_example-0.1.0/solvetide_design_example.egg-info
+copying solvetide_design_example.egg-info/SOURCES.txt -> solvetide_design_example-0.1.0/solvetide_design_example.egg-info
+copying solvetide_design_example.egg-info/dependency_links.txt -> solvetide_design_example-0.1.0/solvetide_design_example.egg-info
+copying solvetide_design_example.egg-info/entry_points.txt -> solvetide_design_example-0.1.0/solvetide_design_example.egg-info
+copying solvetide_design_example.egg-info/requires.txt -> solvetide_design_example-0.1.0/solvetide_design_example.egg-info
+copying solvetide_design_example.egg-info/top_level.txt -> solvetide_design_example-0.1.0/solvetide_design_example.egg-info
+Writing solvetide_design_example-0.1.0/setup.cfg
+Creating tar archive
+removing 'solvetide_design_example-0.1.0' (and everything under it)
+* Building wheel from sdist
+* Getting build dependencies for wheel...
+running egg_info
+writing solvetide_design_example.egg-info/PKG-INFO
+writing dependency_links to solvetide_design_example.egg-info/dependency_links.txt
+writing entry points to solvetide_design_example.egg-info/entry_points.txt
+writing requirements to solvetide_design_example.egg-info/requires.txt
+writing top-level names to solvetide_design_example.egg-info/top_level.txt
+reading manifest file 'solvetide_design_example.egg-info/SOURCES.txt'
+writing manifest file 'solvetide_design_example.egg-info/SOURCES.txt'
+* Building wheel...
+running bdist_wheel
+running build
+running build_py
+creating build/lib
+copying design_app.py -> build/lib
+running egg_info
+writing solvetide_design_example.egg-info/PKG-INFO
+writing dependency_links to solvetide_design_example.egg-info/dependency_links.txt
+writing entry points to solvetide_design_example.egg-info/entry_points.txt
+writing requirements to solvetide_design_example.egg-info/requires.txt
+writing top-level names to solvetide_design_example.egg-info/top_level.txt
+reading manifest file 'solvetide_design_example.egg-info/SOURCES.txt'
+writing manifest file 'solvetide_design_example.egg-info/SOURCES.txt'
+installing to build/bdist.macosx-11.0-arm64/wheel
+running install
+running install_lib
+creating build/bdist.macosx-11.0-arm64/wheel
+copying build/lib/design_app.py -> build/bdist.macosx-11.0-arm64/wheel/.
+running install_egg_info
+Copying solvetide_design_example.egg-info to build/bdist.macosx-11.0-arm64/wheel/./solvetide_design_example-0.1.0-py3.12.egg-info
+running install_scripts
+creating build/bdist.macosx-11.0-arm64/wheel/solvetide_design_example-0.1.0.dist-info/WHEEL
+creating '<source>/dist/.tmp-_2xck4xf/solvetide_design_example-0.1.0-py3-none-any.whl' and adding 'build/bdist.macosx-11.0-arm64/wheel' to it
+adding 'design_app.py'
+adding 'solvetide_design_example-0.1.0.dist-info/METADATA'
+adding 'solvetide_design_example-0.1.0.dist-info/WHEEL'
+adding 'solvetide_design_example-0.1.0.dist-info/entry_points.txt'
+adding 'solvetide_design_example-0.1.0.dist-info/top_level.txt'
+adding 'solvetide_design_example-0.1.0.dist-info/RECORD'
+removing build/bdist.macosx-11.0-arm64/wheel
+Successfully built solvetide_design_example-0.1.0.tar.gz and solvetide_design_example-0.1.0-py3-none-any.whl

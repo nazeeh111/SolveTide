@@ -1,0 +1,54 @@
+{
+  "status": "forward_failed",
+  "requested_strategy": "warm",
+  "effective_strategy": "warm",
+  "policy_gate": null,
+  "forward": {
+    "status": "max_work",
+    "iterations": 1,
+    "residual_norm": 0.2440446602465603,
+    "relative_residual": 3.0894652168215964,
+    "backward_error": 0.007935025463630509,
+    "elapsed_seconds": 0.20627241698093712,
+    "reused_rank": 0,
+    "cache_event": "empty",
+    "timings": {
+      "validation_identity": 0.19555829200544395,
+      "policy": 9.590003173798323e-07,
+      "basis_update_projection": 0.00036837501102127135,
+      "classical_solve_setup": 0.0002945419983007014,
+      "independent_residual_verification": 7.050001295283437e-05,
+      "total": 0.20627241698093712
+    },
+    "memory_bytes": 42604,
+    "matvecs": 1,
+    "message": "true residual exceeds declared tolerance",
+    "identity": {
+      "operator": "0aaf85ff2edcf74667d2f4c124e5915e16fcce7bba841d773a8b61b82658926a",
+      "rhs": "c0d7b346a1587ba3b954f0c4fbc8bf350561df041e47797509e30c51b30ce596",
+      "mapping": "f07202f7ab33c3ded791756d0f69851b953be4229a7c0cea75188f26fa8f9db7",
+      "precision": "float64"
+    },
+    "role": "primal",
+    "conditioning": {
+      "method": "Gershgorin spectral enclosure",
+      "lower_bound": -76.92307692307693,
+      "upper_bound": 215.38461538461542,
+      "condition_upper_bound": null,
+      "limit": "A nonpositive lower bound gives no condition bound; no physical or discretization error certificate."
+    },
+    "policy_features": {
+      "operator_drift": 0.0,
+      "residual_projection": 0.0,
+      "previous_reduction": 0.0,
+      "previous_iterations": 0.0,
+      "available_rank": 0.0,
+      "role_adjoint": 0.0,
+      "dimension": 312.0
+    },
+    "policy_action": {}
+  },
+  "objective": null,
+  "gradient": null,
+  "adjoint": null
+}

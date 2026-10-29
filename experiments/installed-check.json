@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "installed": {
+    "version": "0.1.0",
+    "path": "/private/tmp/solvetide-recipient-01a185f6/lib/python3.12/site-packages/solvetide/__init__.py"
+  },
+  "changed_input_recomputed": true,
+  "independent_check": {
+    "status": "checked",
+    "forward": {
+      "residual_norm": 4.673665326754249e-11,
+      "rhs_norm": 0.07899252560533127,
+      "backward_error": 1.1154041030538535e-12
+    },
+    "adjoint": {
+      "residual_norm": 2.1970084814051136e-11,
+      "rhs_norm": 0.02877301169993239,
+      "backward_error": 1.1489789479097051e-12
+    },
+    "gradient_algebra_matches": true,
+    "scope": "Stored discrete residuals and implicit adjoint algebra only; no solution-error, discretization or physical-model certificate."
+  },
+  "elasticity_accepted": true,
+  "external_application_success": true,
+  "external_deployment_gate_respected": true,
+  "external_objective": 1.5026043246407654e-15,
+  "isolation": "Fresh empty working directory, interpreter -I, installed wheel and separately installed application; no private files or saved caches."
+}

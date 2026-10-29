@@ -1,0 +1,9 @@
+{
+  "runtime_sha256": "98108d59c3532d04b15ee37c2211f73765c04d4fa90c610d14f11a0b4f549e28",
+  "preflight_status": "resource_limit",
+  "preflight_factor_calls": 0,
+  "normal_status": "converged",
+  "normal_factor_calls": 1,
+  "normal_retained_bytes": 1108,
+  "limit_scope": "stored L/U plus permutation upper bound, not opaque workspace or process RSS"
+}

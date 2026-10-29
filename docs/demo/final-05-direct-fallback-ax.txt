@@ -1,0 +1,145 @@
+Browser tab: 1, Title: "SolveTide · Field editor", URL: "http://127.0.0.1:8769/".
+0 AXWebArea SolveTide · Field editor, URL: 127.0.0.1:8769/
+	1 container
+		2 link Description: SolveTide home, Value: 127.0.0.1:8769/
+		3 link Description: Method & limits ↗, Value: 127.0.0.1:8769/#method
+	4 container
+		5 text EDIT → ASSEMBLE → SOLVE → CHECK
+		6 heading Change the design. Keep the equations., Value: 1
+			7 text Change the design.
+			8 text Keep the equations.
+		9 text Explore heat and elastic fields with shared solution memory. Every accepted field and sensitivity is recomputed and checked against the current discrete system.
+		10 container Description: Design controls, ID: controls
+			11 heading Design inputs, Value: 2
+				12 text Design inputs
+			13 text 01
+			14 button Compute field, ID: solve
+			15 text Physical model
+			16 pop up button (collapsed, settable) Physical model, Value: Heat diffusion, ID: family, Secondary Actions: Expand
+				17 menu
+					18 (selected) Heat diffusion
+					19 Linear elasticity
+			20 text Material scale
+			175 text 1.00
+			22 slider (settable, integer) Material scale, Value: 1, ID: material
+			176 text Positive conductivity multiplier
+			24 text Local coefficient contrast
+			177 text 1.05
+			26 slider (settable, float) Local coefficient contrast, Value: 1.0499999523162842, Details: 1.05, ID: contrast
+			27 text Multiplier in the top-right quadrant
+			28 text Source / load scale
+			178 text 1.00
+			30 slider (settable, integer) Source / load scale, Value: 1, ID: source
+			31 text Supported boundary value
+			32 stepper (settable, integer) Supported boundary value, Value: 0, ID: boundary-value
+			33 text Mesh divisions
+			34 pop up button (collapsed, settable) Mesh divisions, Value: 32 × 32, ID: n, Secondary Actions: Expand
+				35 menu
+					36 12 × 12
+					37 20 × 20
+					38 (selected) 32 × 32
+					39 48 × 48
+			40 text Support
+			41 pop up button (collapsed, settable) Support, Value: Left edge, ID: boundary, Secondary Actions: Expand
+				42 menu
+					43 (selected) Left edge
+					44 All edges
+			45 text Solution memory
+			46 pop up button (collapsed, settable) Solution memory, Value: Sparse direct, ID: strategy, Secondary Actions: Expand
+				47 menu
+					48 Warm start · default
+					49 Trained joint policy · gated
+					50 Joint primal + adjoint
+					51 Fixed rank
+					52 Drift threshold
+					53 Cold start
+					54 (selected) Sparse direct
+			55 text TRY A STATE CHANGE
+			56 button Small local edit +5%, ID: small-edit
+				57 text Small local edit
+				58 text +5%
+			59 button Change mesh invalidate, ID: invalidate
+				60 text Change mesh
+				61 text invalidate
+			62 button Limit to 1 iteration failure, ID: force-failure
+				63 text Limit to 1 iteration
+				64 text failure
+			65 button Recompute with direct solver fallback, ID: fallback
+				66 text Recompute with direct solver
+				67 text fallback
+		68 container Temperature field
+			69 text CURRENT ASSEMBLED SYSTEM
+			70 heading Temperature field, Value: 2, ID: field-title
+				179 text Temperature field
+			182 text Accepted · checked
+			73 container
+				74 image ID: field, Description: Temperature field, 32 divisions, range 0.00e+0 to 0.4982. Accepted after residual and adjoint checks.
+				75 text y ↑
+				76 text 0  x → 1
+			183 text 0.00e+0
+			184 text 0.4982
+			181 text Temperature · model units
+			185 text Heat diffusion · 32 × 32 divisions · field and gradient checked
+			81 button Export result JSON ↓, ID: export
+		82 container Solver inspection
+			83 heading Solver inspection, Value: 2, ID: inspection-title
+				84 text Solver inspection
+			85 text 02 Total computation
+			186 text 47.3 ms
+			87 text Primal / adjoint iterations
+			187 text 1 / 1
+			89 text True relative residual
+			188 text 2.02e-13
+			91 text Normwise backward error
+			189 text 1.96e-16
+			93 text Reused rank / memory
+			190 text 0 / 536.1 KiB
+			95 text Objective
+			191 text 0.06812
+			97 text CACHE DECISION
+			192 text empty:factor_built
+			99 text POLICY STATE
+			193 text No learned policy is used for this strategy.
+			101 definition list policy-state
+				194 container requested_strategy
+					195 text requested_strategy
+				196 text direct
+				197 container effective_strategy
+					198 text effective_strategy
+				199 text direct
+				200 container policy_disabled
+					201 text policy_disabled
+				202 text false
+				203 container policy_action
+					204 text policy_action
+				205 text {}
+			114 heading Implicit sensitivities, Value: 3
+				115 text Implicit sensitivities
+			116 text Derivative of the mean squared free field with respect to each parameter, from a checked adjoint solve.
+			117 definition list gradients
+				206 container material
+					207 text material
+				208 text -0.1362
+				209 container contrast
+					210 text contrast
+				211 text -0.009553
+				212 container source
+					213 text source
+				214 text 0.1362
+				215 container boundary_value
+					216 text boundary_value
+				217 text 0.3400
+			130 button (collapsed) Input identities & timings, Secondary Actions: Expand
+				131 text Input identities & timings
+			132 button Clear solution memory, ID: reset
+		133 container method
+			134 text WHAT “ACCEPTED” MEANS
+			135 heading Checked calculation. Explicit limits., Value: 2
+				136 text Checked calculation.
+				137 text Explicit limits.
+			138 text The runtime solves a constrained sparse linear system, then independently recomputes its residual using the current matrix and right-hand side. The adjoint uses the same constrained equations. Reused memory proposes a starting correction; classical iterations decide convergence.
+			139 text A small residual and backward error describe the stored equations. They do not certify physical accuracy or a small solution error in an ill-conditioned system. This editor supports bounded two-dimensional, linear models. Timing here includes assembly, both solves and verification, and is a local observation.
+	140 container
+		141 text SOLVETIDE · REUSABLE SOLVE & SENSITIVITY RUNTIME Local computation. No remote service.
+
+The focused UI element is 65 button Recompute with direct solver fallback, ID: fallback

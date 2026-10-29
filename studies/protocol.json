@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "frozen_before_training": "2026-10-29",
+  "purpose": "CPU research preview. No universal/real-time or external-method victory claim.",
+  "development": {
+    "seeds": [
+      101,
+      102,
+      103,
+      104
+    ],
+    "meshes": [
+      8,
+      12,
+      16
+    ],
+    "boundaries": [
+      "left",
+      "all"
+    ],
+    "steps": 10,
+    "repeats": 2
+  },
+  "confirmation": {
+    "seeds": [
+      901,
+      902,
+      903,
+      904
+    ],
+    "meshes": [
+      20,
+      28,
+      40
+    ],
+    "boundaries": [
+      "right",
+      "both"
+    ],
+    "steps": 10,
+    "repeats": 3
+  },
+  "strategies": [
+    "direct",
+    "cold",
+    "warm",
+    "amg",
+    "amg_reuse",
+    "gcrot",
+    "fixed",
+    "drift",
+    "joint",
+    "learned",
+    "balanced",
+    "separate"
+  ],
+  "families": [
+    "heat",
+    "elasticity"
+  ],
+  "relative_tolerance": 1e-09,
+  "absolute_tolerance": 1e-11,
+  "maxiter": 2000,
+  "memory_budget": 12,
+  "chronological": true,
+  "edits": "source/boundary changes; small contrast; abrupt/global coefficient; ill-conditioned contrast; final boundary/mesh invalidation",
+  "optimization": {
+    "mesh": 24,
+    "boundary": "right",
+    "seed": 1901,
+    "truth": [
+      1.8,
+      4.2
+    ],
+    "start": [
+      0.65,
+      0.6
+    ],
+    "maxiter": 40,
+    "gtol": 1e-08,
+    "ftol": 1e-12
+  },
+  "deployment_gate": "Learned off by default unless development validation saves total time over warm and joint without failures. Confirmation never tunes or enables it.",
+  "pair_actions": [
+    "skip",
+    "balanced",
+    "forward",
+    "adjoint",
+    "primal_only",
+    "adjoint_only"
+  ],
+  "training_target": "Complete pair including assembly and all overhead; plan quotas are feasible capacities and actual used ranks separately recorded; failures incur30s penalty.",
+  "memory_limits": "12 retained basis vectors total for joint controls; separate uses two banks6+6. Retained sparse/warm/factor memory additionally counted, not process peak RSS."
+}

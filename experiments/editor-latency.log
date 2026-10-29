@@ -1,0 +1,50 @@
+[
+  {
+    "family": "heat",
+    "n": 20,
+    "samples": 3,
+    "median_seconds": 0.03219166598864831,
+    "max_observed_seconds": 0.07811320800101385,
+    "failures": 0
+  },
+  {
+    "family": "heat",
+    "n": 32,
+    "samples": 3,
+    "median_seconds": 0.060396459011826664,
+    "max_observed_seconds": 0.06264854100299999,
+    "failures": 0
+  },
+  {
+    "family": "heat",
+    "n": 48,
+    "samples": 3,
+    "median_seconds": 0.16672483397996984,
+    "max_observed_seconds": 0.1687941249983851,
+    "failures": 0
+  },
+  {
+    "family": "elasticity",
+    "n": 20,
+    "samples": 3,
+    "median_seconds": 0.0882109579979442,
+    "max_observed_seconds": 0.09397175000049174,
+    "failures": 0
+  },
+  {
+    "family": "elasticity",
+    "n": 32,
+    "samples": 3,
+    "median_seconds": 0.22002966600121,
+    "max_observed_seconds": 0.2569852919841651,
+    "failures": 0
+  },
+  {
+    "family": "elasticity",
+    "n": 48,
+    "samples": 3,
+    "median_seconds": 0.47850662501878105,
+    "max_observed_seconds": 0.5923710839997511,
+    "failures": 0
+  }
+]

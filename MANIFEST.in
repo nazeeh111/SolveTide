@@ -1,0 +1,16 @@
+include integration/design_app/LICENSE
+include LICENSE README.md CHANGELOG.md CITATION.cff CONTRIBUTING.md SECURITY.md requirements-study.lock
+recursive-include solvetide *.py *.typed *.json *.html *.css *.js
+recursive-include tests *.py
+recursive-include docs *.md *.mmd *.png *.jpg *.svg *.mp4 *.txt *.json
+recursive-include studies *.py *.json
+recursive-include scripts *.py
+recursive-include examples *.py *.json
+recursive-include integration *.py *.toml
+recursive-include experiments *.json *.log *.md
+prune integration/design_app/build
+prune integration/design_app/*.egg-info
+prune .private
+prune .venv
+prune dist
+global-exclude __pycache__ *.pyc .DS_Store

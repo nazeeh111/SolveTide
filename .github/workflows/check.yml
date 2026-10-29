@@ -1,0 +1,38 @@
+name: Numerical and installed-package checks
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  checks:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    env:
+      OPENBLAS_NUM_THREADS: 1
+      OMP_NUM_THREADS: 1
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install pinned development environment
+        run: |
+          python -m pip install -r requirements-study.lock
+          python -m pip install --no-build-isolation -e .
+      - run: python -m pytest -q
+      - run: python -m build --no-isolation
+      - run: python -m build --no-isolation integration/design_app --outdir dist
+      - name: Install recipient environment
+        run: |
+          python -m venv recipient
+          recipient/bin/python -m pip install dist/solvetide-0.1.0-py3-none-any.whl
+          recipient/bin/python -m pip install --no-deps dist/solvetide_design_example-0.1.0-py3-none-any.whl
+          python scripts/installed_check.py --python recipient/bin/python --output installed-check.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: checked-distributions-${{ matrix.os }}
+          path: |
+            dist/*
+            installed-check.json

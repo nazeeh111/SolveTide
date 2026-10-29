@@ -1,0 +1,67 @@
+[
+  {
+    "file": "final-01-initial-ax.txt",
+    "bytes": 6109,
+    "sha256": "bd07bf08ad2186fda3408d33e591498222561fd4a52471da6bdb343e32c16583"
+  },
+  {
+    "file": "final-01-initial.jpg",
+    "bytes": 57269,
+    "sha256": "d5b7318924a3f79b4cf02c32769853cecd91af8fe050b4cfeed7082ed5b5193d"
+  },
+  {
+    "file": "final-01-initial.json",
+    "bytes": 5133,
+    "sha256": "89a510528da4ca03012b363107a111297631a8ae71482a13b7259c3be4b3f77e"
+  },
+  {
+    "file": "final-02-local-edit-ax.txt",
+    "bytes": 6157,
+    "sha256": "44c0511b21a8c69a3e375c531bbecbdb3f1e2890d3ba9ef1cf597844ea747f73"
+  },
+  {
+    "file": "final-02-local-edit.jpg",
+    "bytes": 48617,
+    "sha256": "37d3f1ed93c022bbb163e74ac49adcd40c9b8ab46fa2a2b01d6a365341a88518"
+  },
+  {
+    "file": "final-02-local-edit.json",
+    "bytes": 5168,
+    "sha256": "149f9792e6090b891bc5d5491f31aa684757db0aa4e8d3cdc3c44e7008feb2bd"
+  },
+  {
+    "file": "final-03-remesh-ax.txt",
+    "bytes": 6145,
+    "sha256": "6987e9170794ef146f61933f8a4e97600c6a53c068c9ba98a29632c58b63c90b"
+  },
+  {
+    "file": "final-03-remesh.jpg",
+    "bytes": 47544,
+    "sha256": "383579d71aea73e243c8525aa7661296eea4c2e94fc9b4cf269e95ba8f560ca9"
+  },
+  {
+    "file": "final-04-failure-ax.txt",
+    "bytes": 6113,
+    "sha256": "ea906e482a36e743d98cbb8a7f5fe6b31b286e45f181fccdd6939f525376af60"
+  },
+  {
+    "file": "final-04-failure.jpg",
+    "bytes": 48716,
+    "sha256": "f0462ff57306425cb5470ee4710242366a6bc400824b99969fbc0d77483d49df"
+  },
+  {
+    "file": "final-05-direct-fallback-ax.txt",
+    "bytes": 6135,
+    "sha256": "cb0f58f90211b1bd1d24722d970397f13c17ec312c96784319ff5e4fa5131898"
+  },
+  {
+    "file": "final-05-direct-fallback.jpg",
+    "bytes": 46647,
+    "sha256": "278a117c3aef6faca3560fa2ca79a15814523280c03654021f15a33a804f70e3"
+  },
+  {
+    "file": "final-requirements-review.md",
+    "bytes": 6905,
+    "sha256": "b8989fdc6c3ae6c01415bfd2fcc742c7fa28815c5bf893a7aefa5e661385cf39"
+  }
+]

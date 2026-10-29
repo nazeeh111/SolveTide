@@ -1,0 +1,110 @@
+{
+  "report_sha256": "43ab50fe728593bdcba450c8661958d697e9dd5f38fce0497ccba4aa02ea1cc2",
+  "source_hash_matches": {
+    "integration/design_app/design_app.py": true,
+    "studies/optimization.py": true,
+    "solvetide/runtime.py": true,
+    "solvetide/data/policy.json": true
+  },
+  "runs": 36,
+  "successful": 30,
+  "failures": 6,
+  "invariant_issues": [],
+  "groups": [
+    {
+      "family": "heat",
+      "strategy": "joint",
+      "runs": 3,
+      "successful": 3,
+      "median_successful_seconds": 0.39378354197833687
+    },
+    {
+      "family": "heat",
+      "strategy": "fixed",
+      "runs": 3,
+      "successful": 3,
+      "median_successful_seconds": 0.40306120898458175
+    },
+    {
+      "family": "heat",
+      "strategy": "learned",
+      "runs": 3,
+      "successful": 3,
+      "median_successful_seconds": 0.48291158402571455
+    },
+    {
+      "family": "heat",
+      "strategy": "direct",
+      "runs": 3,
+      "successful": 3,
+      "median_successful_seconds": 0.2311307499767281
+    },
+    {
+      "family": "heat",
+      "strategy": "amg_reuse",
+      "runs": 3,
+      "successful": 3,
+      "median_successful_seconds": 0.5444097080035135
+    },
+    {
+      "family": "heat",
+      "strategy": "warm",
+      "runs": 3,
+      "successful": 3,
+      "median_successful_seconds": 0.4390422500146087
+    },
+    {
+      "family": "elasticity",
+      "strategy": "joint",
+      "runs": 3,
+      "successful": 3,
+      "median_successful_seconds": 1.2097692910174374
+    },
+    {
+      "family": "elasticity",
+      "strategy": "fixed",
+      "runs": 3,
+      "successful": 3,
+      "median_successful_seconds": 1.2922639999887906
+    },
+    {
+      "family": "elasticity",
+      "strategy": "learned",
+      "runs": 3,
+      "successful": 0,
+      "median_successful_seconds": null
+    },
+    {
+      "family": "elasticity",
+      "strategy": "direct",
+      "runs": 3,
+      "successful": 3,
+      "median_successful_seconds": 0.6537658339948393
+    },
+    {
+      "family": "elasticity",
+      "strategy": "amg_reuse",
+      "runs": 3,
+      "successful": 3,
+      "median_successful_seconds": 1.4308693750062957
+    },
+    {
+      "family": "elasticity",
+      "strategy": "warm",
+      "runs": 3,
+      "successful": 0,
+      "median_successful_seconds": null
+    }
+  ],
+  "max_successful_direct_checked_objective": 2.807602841423548e-15,
+  "max_successful_objective_direct_disagreement": 9.852494036409852e-21,
+  "memory": {
+    "report_sha256": "120f3d24f93beefe1a062d75ff3b2674aa0ac88704ffedcdc8eb90d3bcb721b1",
+    "cases": 16,
+    "minimum_peak_rss_bytes": 67108864,
+    "maximum_peak_rss_bytes": 97271808,
+    "all_peak_at_least_baseline": true,
+    "refused_pairs_retained": 4
+  },
+  "limits": "Read-only aggregate audit of reported executed measurements; not a rerun of36optimizations. Success-only timings are paired with all failures; no speedup inferred."
+}

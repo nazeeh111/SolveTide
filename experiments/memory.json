@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "platform": "macOS-27.2-arm64-arm-64bit",
+  "runs": [
+    {
+      "family": "heat",
+      "strategy": "direct",
+      "n": 40,
+      "basis_budget": 12,
+      "baseline_process_peak_bytes": 56606720,
+      "process_peak_rss_bytes": 74235904,
+      "max_retained_storage_bytes": 989748,
+      "failures": 0,
+      "seconds": 0.20040804200107232
+    },
+    {
+      "family": "heat",
+      "strategy": "warm",
+      "n": 40,
+      "basis_budget": 12,
+      "baseline_process_peak_bytes": 56688640,
+      "process_peak_rss_bytes": 67338240,
+      "max_retained_storage_bytes": 129260,
+      "failures": 1,
+      "seconds": 0.2976071670127567
+    },
+    {
+      "family": "heat",
+      "strategy": "gcrot",
+      "n": 40,
+      "basis_budget": 12,
+      "baseline_process_peak_bytes": 57081856,
+      "process_peak_rss_bytes": 69468160,
+      "max_retained_storage_bytes": 286700,
+      "failures": 0,
+      "seconds": 0.6837432500033174
+    },
+    {
+      "family": "heat",
+      "strategy": "fixed",
+      "n": 40,
+      "basis_budget": 12,
+      "baseline_process_peak_bytes": 56557568,
+      "process_peak_rss_bytes": 67338240,
+      "max_retained_storage_bytes": 286700,
+      "failures": 0,
+      "seconds": 0.42214691700064577
+    },
+    {
+      "family": "heat",
+      "strategy": "joint",
+      "n": 40,
+      "basis_budget": 12,
+      "baseline_process_peak_bytes": 57081856,
+      "process_peak_rss_bytes": 67108864,
+      "max_retained_storage_bytes": 286700,
+      "failures": 0,
+      "seconds": 0.3789816669886932
+    },
+    {
+      "family": "heat",
+      "strategy": "learned",
+      "n": 40,
+      "basis_budget": 12,
+      "baseline_process_peak_bytes": 56655872,
+      "process_peak_rss_bytes": 67207168,
+      "max_retained_storage_bytes": 247340,
+      "failures": 0,
+      "seconds": 0.32340820800163783
+    },
+    {
+      "family": "heat",
+      "strategy": "amg_reuse",
+      "n": 40,
+      "basis_budget": 12,
+      "baseline_process_peak_bytes": 56541184,
+      "process_peak_rss_bytes": 74170368,
+      "max_retained_storage_bytes": 404876,
+      "failures": 0,
+      "seconds": 0.5072968330059666
+    },
+    {
+      "family": "heat",
+      "strategy": "separate",
+      "n": 40,
+      "basis_budget": 12,
+      "baseline_process_peak_bytes": 56639488,
+      "process_peak_rss_bytes": 67338240,
+      "max_retained_storage_bytes": 389720,
+      "failures": 0,
+      "seconds": 0.30206658400129527
+    },
+    {
+      "family": "elasticity",
+      "strategy": "direct",
+      "n": 40,
+      "basis_budget": 12,
+      "baseline_process_peak_bytes": 56557568,
+      "process_peak_rss_bytes": 97271808,
+      "max_retained_storage_bytes": 4499676,
+      "failures": 0,
+      "seconds": 0.6630281250108965
+    },
+    {
+      "family": "elasticity",
+      "strategy": "warm",
+      "n": 40,
+      "basis_budget": 12,
+      "baseline_process_peak_bytes": 56754176,
+      "process_peak_rss_bytes": 79282176,
+      "max_retained_storage_bytes": 526284,
+      "failures": 2,
+      "seconds": 1.673533834022237
+    },
+    {
+      "family": "elasticity",
+      "strategy": "gcrot",
+      "n": 40,
+      "basis_budget": 12,
+      "baseline_process_peak_bytes": 56459264,
+      "process_peak_rss_bytes": 85049344,
+      "max_retained_storage_bytes": 841164,
+      "failures": 0,
+      "seconds": 2.75770483299857
+    },
+    {
+      "family": "elasticity",
+      "strategy": "fixed",
+      "n": 40,
+      "basis_budget": 12,
+      "baseline_process_peak_bytes": 56754176,
+      "process_peak_rss_bytes": 79052800,
+      "max_retained_storage_bytes": 841164,
+      "failures": 0,
+      "seconds": 1.276668125006836
+    },
+    {
+      "family": "elasticity",
+      "strategy": "joint",
+      "n": 40,
+      "basis_budget": 12,
+      "baseline_process_peak_bytes": 56492032,
+      "process_peak_rss_bytes": 83886080,
+      "max_retained_storage_bytes": 841164,
+      "failures": 0,
+      "seconds": 1.3293577919830568
+    },
+    {
+      "family": "elasticity",
+      "strategy": "learned",
+      "n": 40,
+      "basis_budget": 12,
+      "baseline_process_peak_bytes": 56803328,
+      "process_peak_rss_bytes": 79560704,
+      "max_retained_storage_bytes": 788684,
+      "failures": 0,
+      "seconds": 1.8659271670039743
+    },
+    {
+      "family": "elasticity",
+      "strategy": "amg_reuse",
+      "n": 40,
+      "basis_budget": 12,
+      "baseline_process_peak_bytes": 56786944,
+      "process_peak_rss_bytes": 89227264,
+      "max_retained_storage_bytes": 2028512,
+      "failures": 1,
+      "seconds": 1.4887013329716865
+    },
+    {
+      "family": "elasticity",
+      "strategy": "separate",
+      "n": 40,
+      "basis_budget": 12,
+      "baseline_process_peak_bytes": 56655872,
+      "process_peak_rss_bytes": 80871424,
+      "max_retained_storage_bytes": 1314968,
+      "failures": 0,
+      "seconds": 1.2297857080120593
+    }
+  ],
+  "limits": "Separate process high-water RSS, one run per strategy and family; includes imports/assembly/native workspaces, no hard cap. Fixed12 retained vectors matched; total allocated memory differs and is measured, not equated."
+}

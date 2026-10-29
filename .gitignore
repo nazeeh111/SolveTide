@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+.private/
+.DS_Store
+TASK_STATE.md
+CONTRACT.md
+experiments/editor-final-launch.py
+!experiments/*.log
+!experiments/**/*.log

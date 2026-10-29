@@ -1,0 +1,40 @@
+heat joint: success=True J=2.81e-15 t=0.583s
+heat fixed: success=True J=2.81e-15 t=0.612s
+heat learned: success=True J=2.81e-15 t=0.736s
+heat direct: success=True J=2.81e-15 t=0.412s
+heat amg_reuse: success=True J=2.81e-15 t=4.705s
+heat warm: success=True J=2.81e-15 t=2.758s
+elasticity joint: success=True J=4.01e-18 t=5.048s
+elasticity fixed: success=True J=4e-18 t=2.639s
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "<source>/studies/optimization.py", line 13, in <module>
+    r=module.optimize(family=family,n=24,strategy=strategy)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<source>/integration/design_app/design_app.py", line 30, in optimize
+    result=minimize(evaluate,np.log([.65,.6]),jac=True,method='L-BFGS-B',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<source>/.venv/lib/python3.12/site-packages/scipy/optimize/_minimize.py", line 784, in minimize
+    res = _minimize_lbfgsb(fun, x0, args, jac, bounds,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<source>/.venv/lib/python3.12/site-packages/scipy/optimize/_lbfgsb_py.py", line 420, in _minimize_lbfgsb
+    f, g = func_and_grad(x)
+           ^^^^^^^^^^^^^^^^
+  File "<source>/.venv/lib/python3.12/site-packages/scipy/optimize/_differentiable_functions.py", line 412, in fun_and_grad
+    self._update_fun()
+  File "<source>/.venv/lib/python3.12/site-packages/scipy/optimize/_differentiable_functions.py", line 362, in _update_fun
+    fx = self._wrapped_fun(self.x)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<source>/.venv/lib/python3.12/site-packages/scipy/_lib/_util.py", line 544, in __call__
+    fx = self.f(np.copy(x), *self.args)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<source>/.venv/lib/python3.12/site-packages/scipy/optimize/_optimize.py", line 80, in __call__
+    self._compute_if_needed(x, *args)
+  File "<source>/.venv/lib/python3.12/site-packages/scipy/optimize/_optimize.py", line 74, in _compute_if_needed
+    fg = self.fun(x, *args)
+         ^^^^^^^^^^^^^^^^^^
+  File "<source>/integration/design_app/design_app.py", line 24, in evaluate
+    if not g.accepted:raise RuntimeError(f'Optimization stopped: {f.status}/{g.status}')
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Optimization stopped: converged/adjoint_failed
