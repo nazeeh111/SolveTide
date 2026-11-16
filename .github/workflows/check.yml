@@ -27,6 +27,6 @@ jobs:
       - name: Install recipient environment
         run: |
           python -m venv recipient
-          recipient/bin/python -m pip install dist/solvetide-0.1.0-py3-none-any.whl
-          recipient/bin/python -m pip install --no-deps dist/solvetide_design_example-0.1.0-py3-none-any.whl
+          recipient/bin/python -m pip install dist/solvetide-*-py3-none-any.whl dist/solvetide_design_example-*-py3-none-any.whl
+          recipient/bin/python -m pip check
           python scripts/installed_check.py --python recipient/bin/python --output installed-check.json

@@ -33,14 +33,14 @@ All correction methods use a total retained rank12; the separate control uses tw
 
 ## Independent recipient installation
 
-Build both distributions, install into a fresh environment, and run from an empty directory with Python isolated mode. No checkout imports, private files or previous caches are needed.
+This recipe builds the current `0.1.1.dev0` source and its matching design client. The published v0.1.0 files remain a historical release; reproduce those from the v0.1.0 tag. Build both current distributions into a separate output directory, install them together into a fresh environment, and run from an empty directory with Python isolated mode. No checkout imports, private files or previous caches are needed.
 
 ```sh
-python -m build --no-isolation
-python -m build --no-isolation integration/design_app --outdir dist
+python -m build --no-isolation --outdir dist/source-check
+python -m build --no-isolation integration/design_app --outdir dist/source-check
 python3.12 -m venv recipient
-recipient/bin/python -m pip install dist/solvetide-0.1.0-py3-none-any.whl
-recipient/bin/python -m pip install --no-deps dist/solvetide_design_example-0.1.0-py3-none-any.whl
+recipient/bin/python -m pip install dist/source-check/solvetide-0.1.1.dev0-py3-none-any.whl dist/source-check/solvetide_design_example-0.1.1.dev0-py3-none-any.whl
+recipient/bin/python -m pip check
 python scripts/installed_check.py --python recipient/bin/python --output installed-check.json
 recipient/bin/solvetide-design --output inverse-design.json
 ```

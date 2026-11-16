@@ -3,12 +3,12 @@ requires = ["setuptools==84.2.1", "wheel==0.48.0"]
 build-backend = "setuptools.build_meta"
 [project]
 name = "solvetide-design-example"
-version = "0.1.0"
+version = "0.1.1.dev0"
 description = "Separately installed inverse-design client of SolveTide public API"
 requires-python = ">=3.12"
 license = "MIT"
 authors = [{name = "Nazeeh Abdul-Hadi"}]
-dependencies = ["solvetide==0.1.0"]
+dependencies = ["solvetide==0.1.1.dev0"]
 [project.scripts]
 solvetide-design = "design_app:main"
 [tool.setuptools]
