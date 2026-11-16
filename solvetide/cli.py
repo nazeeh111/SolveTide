@@ -12,14 +12,14 @@ def main(argv=None):
     p=argparse.ArgumentParser(prog='solvetide',description='Checked sparse simulations and discrete adjoint sensitivities.')
     p.add_argument('--version',action='version',version=__version__)
     sub=p.add_subparsers(dest='command',required=True)
-    s=sub.add_parser('solve',help='assemble, solve, differentiate and optionally export original equations')
+    s=sub.add_parser('solve',help='assemble, solve, differentiate and optionally export original equations', description='Solve a discrete system and compute sensitivities. Accepted results may be exported without overwriting an existing file.')
     s.add_argument('--family',choices=['heat','elasticity'],default='heat');s.add_argument('--n',type=int,default=20)
     s.add_argument('--boundary',choices=['left','right','both','all'],default='left')
     for name,default in [('material',1.),('source',1.),('contrast',1.),('boundary-value',0.)]:s.add_argument('--'+name,type=float,default=default)
     s.add_argument('--target',type=float,default=0.)
     s.add_argument('--strategy',choices=['cold','warm','fixed','joint','drift','learned','direct','gcrot','amg','amg_reuse'],default='warm')
-    s.add_argument('--maxiter',type=int,default=2000);s.add_argument('--output')
-    v=sub.add_parser('verify',help='independently recompute exported equation residuals');v.add_argument('artifact')
+    s.add_argument('--maxiter',type=int,default=2000,help='iteration limit (default: 2000)');s.add_argument('--output',help='write accepted equations and results to a new JSON file')
+    v=sub.add_parser('verify',help='independently recompute exported equation residuals', description='Check stored discrete equations and gradients; this does not certify the physical model or bound solution error.');v.add_argument('artifact',help='exported JSON result')
     u=sub.add_parser('studio',help='open the loopback field editor');u.add_argument('--port',type=int,default=8765)
     a=p.parse_args(argv)
     try:
@@ -43,7 +43,7 @@ def main(argv=None):
         if g.accepted and a.output:
             save(a.output,bundle(system,f,g,config,a.target));report['artifact']=a.output
         print(json.dumps(report,indent=2,allow_nan=False));return 0 if g.accepted else 3
-    except (ValueError,TypeError,OSError) as e:
+    except (ValueError,KeyError,TypeError,OSError,OverflowError) as e:
         print(json.dumps({'status':'invalid','message':str(e)}),file=sys.stderr);return 2
 
 if __name__=='__main__':raise SystemExit(main())

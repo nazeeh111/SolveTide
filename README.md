@@ -8,14 +8,14 @@ This is a numerical research preview. The trained joint-memory policy is **disab
 
 ![The current field editor with actual solved temperature and checked state](docs/studio.jpg)
 
-[Watch the15-second actual browser replay](https://github.com/nazeeh111/SolveTide/releases/download/v0.1.0/solvetide-0.1.0-demo.mp4). Pauses are edited; it is not a real-time benchmark.
+[Watch the 15-second browser replay](https://github.com/nazeeh111/SolveTide/releases/download/v0.1.0/solvetide-0.1.0-demo.mp4). Pauses are edited; it is not a real-time benchmark.
 
 ## Run locally
 
 Python 3.12+. No account, API key or network access is needed after installing dependencies.
 
 ```sh
-git clone --branch v0.1.0 --depth 1 https://github.com/nazeeh111/SolveTide.git
+git clone https://github.com/nazeeh111/SolveTide.git
 cd SolveTide
 python3.12 -m venv .venv
 . .venv/bin/activate
@@ -25,7 +25,7 @@ solvetide studio
 
 Open `http://127.0.0.1:8765`. The server binds only to loopback and loads no external assets. Adjust the conductivity/elastic modulus, local material contrast, source/load or supported boundary value, then compute. Inspect true residuals, backward error, gradients, memory and cache events. Changing controls marks the old picture stale and disables export. The editor includes an invalidating mesh edit, a one-iteration failure and a fresh sparse-direct fallback.
 
-Download the pinned wheel from [v0.1.0](https://github.com/nazeeh111/SolveTide/releases/tag/v0.1.0) for an installed version. Release assets and source are described in [the reproduction guide](docs/reproducibility.md).
+The [v0.1.0 release](https://github.com/nazeeh111/SolveTide/releases/tag/v0.1.0) is a historical snapshot; its wheel does not contain the later checker changes described here. Release assets and source are described in [the reproduction guide](docs/reproducibility.md).
 
 ## Use the runtime
 
@@ -53,7 +53,7 @@ solvetide verify result.json
 python solvetide/checker.py result.json
 ```
 
-Every exported CLI result includes actual CSR equations, forward and adjoint vectors, discrete derivatives, mesh/constraint identities, tolerances and a content digest. The checker recomputes residuals and the adjoint contraction with standard-library arithmetic. It does not certify physical truth or a solution-error enclosure. Existing output paths refuse overwriting.
+Every exported CLI result includes actual CSR equations, forward and adjoint vectors, discrete derivatives, mesh/constraint identities, tolerances and a content digest. The checker recomputes residuals and the adjoint contraction with standard-library arithmetic. It checks the stored discrete problem, not the continuous physical system. It does not certify physical truth or a solution-error enclosure. Existing output paths refuse overwriting.
 
 ## What is implemented
 

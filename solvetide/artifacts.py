@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 from .checker import digest
+from . import __version__
 
 
 def matrix(a):
@@ -13,7 +14,7 @@ def matrix(a):
 def bundle(system,forward,gradient,config,target=None):
     if not forward.accepted or not gradient.accepted:raise ValueError('accepted forward AND adjoint required')
     _,dj=system.objective(forward.x,target)
-    doc={'schema_version':1,'artifact':'solvetide-discrete-result','package_version':'0.1.0',
+    doc={'schema_version':1,'artifact':'solvetide-discrete-result','package_version':__version__,
          'input':{'family':system.family,'n':system.n,'boundary':system.boundary,'parameters':dict(system.parameters),'target':target},
          'identity':dict(forward.identity),'assembly_identity':dict(system.identity),
          'acceptance':{'rtol':config.rtol,'atol':config.atol},'objective':gradient.objective,'gradient':gradient.gradient,

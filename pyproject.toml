@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "solvetide"
-version = "0.1.0"
+version = "0.1.1.dev0"
 description = "Residual-checked sparse simulation and implicit sensitivities across design edits"
 readme = "README.md"
 requires-python = ">=3.12"
