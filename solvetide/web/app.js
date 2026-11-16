@@ -10,15 +10,17 @@ const ctx = canvas.getContext('2d');
 const fmt = value => value == null || !Number.isFinite(value) ? '—' : Math.abs(value) < 0.001 || Math.abs(value) >= 10000 ? value.toExponential(2) : value.toPrecision(4);
 function status(text, style='') { $('status').textContent=text; $('status').className='badge '+style; }
 function unacceptedField(reason) {
+  $('field-context').textContent=$('empty').hidden?'Previous solved field':'Field view';
   const image=$('empty').hidden?'The faded image is a previous field and is not accepted for the current inputs.':'No field is displayed.';
   canvas.setAttribute('aria-label',`${reason} No current accepted field. ${image}`);
 }
 function markStale() {
   unacceptedField('Inputs changed.');
-  if (current) {
+  if (current || running) {
     current=null;
-    status('Inputs changed · stale','stale');
-    $('field-note').textContent='Displayed field belongs to previous inputs. Recompute to accept and export the changed design.';
+    const hasField=$('empty').hidden;
+    status(hasField?'Inputs changed · stale':'Inputs changed','stale');
+    $('field-note').textContent=hasField?'Displayed field belongs to previous inputs. Recompute to accept and export the changed design.':'Compute the changed design to display a field.';
     canvas.style.opacity='0.35';
   }
   $('export').disabled=true;
@@ -26,9 +28,8 @@ function markStale() {
   $('source-value').textContent=Number($('source').value).toFixed(2);
   $('contrast-value').textContent=Number($('contrast').value).toFixed(2);
   const elastic=$('family').value==='elasticity';
-  $('field-title').textContent=elastic?'Displacement magnitude':'Temperature field';
   $('material-hint').textContent=elastic?'Positive stiffness multiplier':'Positive conductivity multiplier';
-  $('field-unit').textContent=elastic?'Displacement · model units':'Temperature · model units';
+  if (!$('empty').hidden) labelField(elastic);
   if (running) cancel(false);
 }
 controls.addEventListener('input',markStale);
@@ -86,6 +87,7 @@ async function cancel(show=true) {
  if(show){status('Cancelled');$('field-note').textContent='Computation cancelled. No new field or gradient was accepted.';}
 }
 function updateInspection(data) {
+ if (data.input) $('inspection-title').textContent='Last solve · '+(data.input.family==='elasticity'?'elasticity':'heat');
  const primal=data.primal||{},adjoint=data.adjoint||{};
  $('time').textContent=data.total_seconds==null?'—':(data.total_seconds*1000).toFixed(1)+' ms';
  $('iterations').textContent=(primal.iterations??'—')+' / '+(adjoint.iterations??'—');
@@ -110,8 +112,14 @@ function updateInspection(data) {
 }
 const colors=[[25,61,75],[28,129,116],[145,186,113],[242,220,112]];
 function color(t){t=Math.max(0,Math.min(1,t));const x=t*3,i=Math.min(2,Math.floor(x)),r=x-i;return 'rgb('+colors[i].map((v,k)=>Math.round(v+(colors[i+1][k]-v)*r)).join(',')+')';}
+function labelField(elastic) {
+ $('field-title').textContent=elastic?'Displacement magnitude':'Temperature field';
+ $('field-unit').textContent=elastic?'Displacement · model units':'Temperature · model units';
+}
 function renderField(data) {
  const coords=data.coordinates,cells=data.cells,raw=data.field,elastic=data.input.family==='elasticity';
+ labelField(elastic);
+ $('field-context').textContent='Current solved field';
  const values=elastic?coords[0].map((_,i)=>Math.hypot(raw[2*i],raw[2*i+1])):raw;
  const low=Math.min(...values),high=Math.max(...values),span=high-low||1;
  $('min').textContent=fmt(low);$('max').textContent=fmt(high);

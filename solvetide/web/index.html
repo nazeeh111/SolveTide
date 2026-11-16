@@ -22,7 +22,7 @@
 
 <div class="demo-controls"><span class="small-label">TRY A STATE CHANGE</span><button type="button" id="small-edit">Small local edit <span>+5%</span></button><button type="button" id="invalidate">Change mesh <span>invalidate</span></button><button type="button" id="force-failure">Limit to 1 iteration <span>failure</span></button><button type="button" id="fallback">Recompute with direct solver <span>fallback</span></button></div>
 </form>
-<section class="field-panel" aria-labelledby="field-title"><div class="field-heading"><div><p class="eyebrow">CURRENT ASSEMBLED SYSTEM</p><h2 id="field-title">Temperature field</h2></div><span class="badge" id="status" role="status">Ready to compute</span></div>
+<section class="field-panel" aria-labelledby="field-title"><div class="field-heading"><div><p class="eyebrow" id="field-context">Field view</p><h2 id="field-title">Temperature field</h2></div><span class="badge" id="status" role="status">Ready to compute</span></div>
 <div class="canvas-wrap"><canvas id="field" width="900" height="620" role="img" aria-label="No field computed yet"></canvas><div id="empty"><span class="empty-symbol">∇</span><p>Your first field starts here.</p><span>Choose a model, then compute the current equations.</span></div><div class="axis-note">y ↑<br>0 <span>x → 1</span></div></div>
 <div class="legend"><span id="min">—</span><div class="ramp"></div><span id="max">—</span><span id="field-unit">Temperature · model units</span></div>
 <div class="field-footer"><p id="field-note">No solution has been accepted.</p><button id="export" type="button" disabled>Export result JSON ↓</button></div>

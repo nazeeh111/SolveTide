@@ -3,3 +3,14 @@
 .policy-box{margin-top:15px;padding:12px;border:1px solid var(--line);background:#fafbf5}.policy-box p{font-size:10px;line-height:1.65;margin:6px 0;color:var(--muted)}.policy-box dl{margin:8px 0 0}.policy-box dd{overflow-wrap:anywhere;text-align:right;max-width:120px}
 
 .controls>.primary{margin-top:0;margin-bottom:12px}.controls>.quiet#cancel{margin-top:0;margin-bottom:12px}
+
+
+/* Keep the field quantity, range and acceptance state legible on narrow displays. */
+.field-heading { flex-wrap: wrap; gap: 8px; }
+.badge, .legend, #field-unit, .axis-note { font-size: 12px; }
+.legend { flex-wrap: wrap; }
+.legend .ramp { flex: 1 1 50px; max-width: 100px; }
+#field-unit { max-width: none; }
+@media (max-width: 680px) {
+  #field-unit { flex-basis: 100%; }
+}
