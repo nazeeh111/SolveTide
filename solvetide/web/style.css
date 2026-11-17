@@ -3,3 +3,22 @@
 .policy-box{margin-top:15px;padding:12px;border:1px solid var(--line);background:#fafbf5}.policy-box p{font-size:10px;line-height:1.65;margin:6px 0;color:var(--muted)}.policy-box dl{margin:8px 0 0}.policy-box dd{overflow-wrap:anywhere;text-align:right;max-width:120px}
 
 .controls>.primary{margin-top:0;margin-bottom:12px}.controls>.quiet#cancel{margin-top:0;margin-bottom:12px}
+
+/* Keep controls and numerical evidence readable in the narrow field workspace. */
+@media(max-width:680px){
+ body{font-size:16px}
+ .intro-copy{font-size:16px}
+ label{font-size:14px}
+ input[type=number],select{font-size:16px;min-height:44px}
+ button,.primary,.demo-controls button,.field-footer button{font-size:14px;min-height:44px}
+ .demo-controls button span,.hint,.input-row output{font-size:12px}
+ .legend,#field-unit,.field-footer p,#error{font-size:12px}
+ .legend{flex-wrap:wrap;gap:8px}
+ #field-unit{max-width:none;flex-basis:100%;margin-left:0}
+ .field-footer{flex-wrap:wrap}
+ .field-footer p{max-width:none}
+ .field-footer button{white-space:normal}
+ .metrics div span,.cache-box p,.policy-box p,dt,dd,summary{font-size:12px}
+ .metrics{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .method p:not(.eyebrow){font-size:14px}
+}

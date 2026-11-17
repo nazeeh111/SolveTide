@@ -1,0 +1,20 @@
+[
+  {
+    "file": "editor-before.json",
+    "revision": 5,
+    "field_values": 441,
+    "triangles": 800,
+    "residual_norm": 4.8002874651423286e-11,
+    "relative_residual": 9.91029381242766e-10,
+    "scope": "Recomputed stored forward CSR residual only; no adjoint/gradient, solution-error or physical-model certificate."
+  },
+  {
+    "file": "editor-after.json",
+    "revision": 6,
+    "field_values": 441,
+    "triangles": 800,
+    "residual_norm": 4.372466789400757e-11,
+    "relative_residual": 9.027049084602885e-10,
+    "scope": "Recomputed stored forward CSR residual only; no adjoint/gradient, solution-error or physical-model certificate."
+  }
+]

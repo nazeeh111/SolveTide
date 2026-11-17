@@ -6,7 +6,24 @@ An installable CPU runtime for sparse heat and linear-elasticity solves, implici
 
 This is a numerical research preview. The trained joint-memory policy is **disabled by development validation**; ordinary warm starts are the default. Recycling, implicit differentiation and residual checking are established methods. SolveTide does not establish a general acceleration or real-time breakthrough.
 
-![The current field editor with actual solved temperature and checked state](docs/studio.jpg)
+<picture>
+  <source media="(max-width: 640px)" srcset="docs/presentation/field-edit-mobile.svg">
+  <img src="docs/presentation/field-edit.svg" alt="Actual heat-editor exports before and after a top-right conductivity contrast edit from 2.00 to 2.10, with shared temperature limits and a separately scaled signed field difference. Both fields retain 441 nodes and 800 triangles.">
+</picture>
+
+**The changed coefficient is local. The solve is global.** A real +5% edit in the
+field editor recomputes the temperature and implicit sensitivities. These actual
+exports preserve the mesh, field values and sparse equations. A separate
+standard-library reader recomputes the stored forward residual; the richer CLI
+artifact also carries its adjoint and parameter derivatives.
+
+[Follow this edit and inspect the data](docs/presentation/README.md) · [Reopen the evidence bundle](docs/presentation/field-evidence.zip) · [Current desktop workspace](docs/presentation/workspace-current.png) · [Phone workspace](docs/presentation/workspace-mobile.png)
+
+<details><summary>Earlier field-editor capture</summary>
+
+![Earlier actual field editor capture](docs/studio.jpg)
+
+</details>
 
 [Watch the 15-second browser replay](https://github.com/nazeeh111/SolveTide/releases/download/v0.1.0/solvetide-0.1.0-demo.mp4). Pauses are edited; it is not a real-time benchmark.
 

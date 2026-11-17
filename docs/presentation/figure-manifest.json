@@ -1,0 +1,49 @@
+{
+  "source_commit": "e639abebfbfef204d21a3af851fed5d6369f2ae3",
+  "source_tree": "3a8cdafc58a9ff9111e9bf5935bff5b4cadb75fe",
+  "inputs": {
+    "editor-before.json": "a5d3aa1deb690f2233de3c0a1196ac759ea8fb97b2f773467a113dd931866925",
+    "editor-after.json": "a15fec45a0f48557c9472b033cb1767850e4de0a57499d330d103aa544da0f6e",
+    "editor-checks.json": "060d8e28e7d9ec8b6529bb03190fb35a2b7b3c187fb743dd4978f43f9a9b6247"
+  },
+  "field_values_per_run": 441,
+  "triangles_per_panel": 800,
+  "shared_temperature_limits": [
+    0.0,
+    0.4788542589596847
+  ],
+  "symmetric_delta_limits": [
+    -0.0024670508786768797,
+    0.0024670508786768797
+  ],
+  "delta_min_max": [
+    -0.0024670508786768797,
+    0.0004982193637221854
+  ],
+  "objective_before_after": [
+    0.06394799174272758,
+    0.06363670781793167
+  ],
+  "contrast_gradient_before_after": [
+    -0.0032481663021744524,
+    -0.002983305735726991
+  ],
+  "transforms": [
+    "All source mesh cells; facet color is arithmetic mean of three stored nodal values, as in the editor",
+    "Delta computed as after minus before, before per-facet averaging",
+    "Same temperature limits for both fields; a separate symmetric signed difference scale",
+    "Dashed top-right quadrant identifies the edited material region; no geometry or coordinate changes",
+    "No solver, fitting, smoothing, normalization, interpolation or sample exclusion in presentation"
+  ],
+  "limits": "Dimensionless supported discrete heat problem. Residual/gradient acceptance is not physical accuracy or a solution-error enclosure.",
+  "outputs": {
+    "field-edit": {
+      "png": "dc23608b2a663ecb4dc01afadafe47c3a44e8ebdce7f1bf7ad4ecdceaadf2f00",
+      "svg": "7d80510320d06db5d212391fb8c03c342340b0958638bc5c9ab092ecd3c65033"
+    },
+    "field-edit-mobile": {
+      "png": "5d6dc6e0fd9fc16850feded1cbd5ad7f4ee2eff04da97211d614c6f0a9e6c586",
+      "svg": "38eb306637bea53525e5f1fe8d759319e9f558ab0a0bd18fa28e528be9061a1b"
+    }
+  }
+}

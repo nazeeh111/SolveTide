@@ -1,0 +1,3 @@
+# Preserve exact recorded evidence and SVG bytes across Git newline settings.
+/docs/presentation/*.json -text -eol
+/docs/presentation/*.svg -text -eol
