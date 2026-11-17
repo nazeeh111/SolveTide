@@ -1,7 +1,10 @@
 """Versioned solve evidence, exported only after accepted forward and adjoint."""
 from __future__ import annotations
 import json
+import os
 from pathlib import Path
+import secrets
+import warnings
 from .checker import digest
 from . import __version__
 
@@ -30,5 +33,26 @@ def bundle(system,forward,gradient,config,target=None):
 
 
 def save(path,document):
-    with Path(path).open('x',encoding='utf-8') as stream:
-        json.dump(document,stream,indent=2,allow_nan=False);stream.write('\n')
+    path=Path(path)
+    stage=path.parent / f'.solvetide-{secrets.token_hex(16)}.tmp'
+    fd=os.open(stage,os.O_WRONLY | os.O_CREAT | os.O_EXCL,0o666)
+    published=False
+    try:
+        try:
+            stream=os.fdopen(fd,'w',encoding='utf-8')
+        except BaseException:
+            os.close(fd)
+            raise
+        with stream:
+            json.dump(document,stream,indent=2,allow_nan=False);stream.write('\n')
+        os.link(stage,path)
+        published=True
+    finally:
+        try:
+            stage.unlink()
+        except OSError as error:
+            if not published:
+                raise OSError(f'Could not remove incomplete staging file {stage}: {error}') from error
+            with warnings.catch_warnings():
+                warnings.simplefilter('always',RuntimeWarning)
+                warnings.warn(f'Result published at {path}; staging file remains at {stage}: {error}',RuntimeWarning)

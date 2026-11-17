@@ -72,6 +72,8 @@ python solvetide/checker.py result.json
 
 Every exported CLI result includes actual CSR equations, forward and adjoint vectors, discrete derivatives, mesh/constraint identities, tolerances and a content digest. The checker recomputes residuals and the adjoint contraction with standard-library arithmetic. It checks the stored discrete problem, not the continuous physical system. It does not certify physical truth or a solution-error enclosure. Existing output paths refuse overwriting.
 
+Exports are staged beside the destination and published exclusively after writing, so an ordinary write failure permits a retry at the same path. The destination filesystem must support hard links. A forced termination may leave a temporary staging file; inspect the destination before retrying.
+
 ## What is implemented
 
 | Capability | Scope |
